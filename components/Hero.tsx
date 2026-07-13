@@ -23,8 +23,9 @@ export default function Hero() {
             className="object-cover object-center"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-rv-ink/80 via-rv-ink/35 to-rv-ink/25" />
-        <div className="absolute inset-0 bg-gradient-to-r from-rv-ink/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-rv-ink/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-rv-ink/90 via-rv-ink/45 to-rv-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-rv-ink/70 via-rv-ink/25 to-transparent" />
         <div className="grain" />
       </div>
 
@@ -33,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mb-4 font-[family-name:var(--font-display)] text-3xl text-white md:text-5xl lg:text-6xl"
+          className="mb-4 font-[family-name:var(--font-display)] text-3xl text-white drop-shadow-sm md:text-5xl lg:text-6xl"
         >
           Riasis Verde
         </motion.p>
@@ -42,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.28 }}
-          className="max-w-xl text-balance text-2xl font-light leading-snug text-white/95 md:max-w-2xl md:text-4xl md:leading-tight"
+          className="max-w-xl text-balance text-2xl font-light leading-snug text-white drop-shadow-sm md:max-w-2xl md:text-4xl md:leading-tight"
         >
           Paisajes que respiran con el clima y el carácter de Honduras.
         </motion.h1>
@@ -51,7 +52,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.42 }}
-          className="mt-5 max-w-md text-base text-white/75 md:text-lg"
+          className="mt-5 max-w-md text-base text-white/90 md:text-lg"
         >
           Diseño, instalación y mantenimiento de exteriores con mirada local y
           ejecución impecable.
