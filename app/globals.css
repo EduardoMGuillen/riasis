@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --rv-white: #fbfcfb;
+  --rv-fog: #f0f3f0;
+  --rv-mist: #e2e8e3;
+  --rv-stone: #6b746e;
+  --rv-charcoal: #1c221e;
+  --rv-ink: #121613;
+  --rv-leaf: #2f6b45;
+  --rv-forest: #1a3d2a;
+  --rv-moss: #3f8f5a;
+  --rv-sage: #7aab88;
+  --rv-glow: #c5ddcb;
+  --background: var(--rv-white);
+  --foreground: var(--rv-charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-rv-white: var(--rv-white);
+  --color-rv-fog: var(--rv-fog);
+  --color-rv-mist: var(--rv-mist);
+  --color-rv-stone: var(--rv-stone);
+  --color-rv-charcoal: var(--rv-charcoal);
+  --color-rv-ink: var(--rv-ink);
+  --color-rv-leaf: var(--rv-leaf);
+  --color-rv-forest: var(--rv-forest);
+  --color-rv-moss: var(--rv-moss);
+  --color-rv-sage: var(--rv-sage);
+  --color-rv-glow: var(--rv-glow);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1411;
+    --foreground: #e8eee9;
+    --rv-fog: #161c18;
+    --rv-mist: #243028;
+    --rv-stone: #9aa69e;
+    --rv-charcoal: #e8eee9;
+    --rv-ink: #f5f8f5;
+    --rv-glow: #1e3326;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--rv-moss) 35%, transparent);
+  color: var(--rv-ink);
+}
+
+.grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.leaf-wash {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, color-mix(in srgb, var(--rv-glow) 70%, transparent), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 80%, color-mix(in srgb, var(--rv-mist) 80%, transparent), transparent 50%),
+    var(--rv-fog);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
