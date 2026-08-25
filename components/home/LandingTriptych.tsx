@@ -54,12 +54,12 @@ const panels = [
 
 export default function LandingTriptych() {
   return (
-    <main className="relative bg-black text-white max-md:h-svh max-md:snap-y max-md:snap-mandatory max-md:overflow-y-auto">
+    <main className="relative h-svh overflow-hidden bg-black text-white">
       <motion.header
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between px-5 py-5 md:px-8 md:py-7"
+        className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between px-5 py-4 md:px-8 md:py-7"
       >
         <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-white/80">
           Riasis
@@ -74,7 +74,7 @@ export default function LandingTriptych() {
           <Link
             key={panel.href}
             href={panel.href}
-            className="landing-panel group max-md:snap-start outline-none focus-visible:z-20"
+            className="landing-panel group outline-none focus-visible:z-20"
             aria-label={`${panel.kicker}: Riasis ${panel.title}`}
           >
             <motion.div
@@ -90,35 +90,42 @@ export default function LandingTriptych() {
                 priority
                 quality={90}
                 sizes="(max-width: 767px) 100vw, 80vw"
-                className="object-cover object-center transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-focus-visible:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                className="object-cover object-center transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-active:scale-105 group-hover:scale-110 group-focus-visible:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div className={`absolute inset-0 ${panel.wash}`} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/25" />
+              <div className="absolute inset-0 bg-black/40 md:bg-gradient-to-t md:from-black/80 md:via-black/20 md:to-black/25" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-transparent" />
               <div className="grain opacity-[0.12] mix-blend-overlay" />
             </motion.div>
 
             <span
-              className={`absolute inset-x-0 top-0 z-10 h-0.5 origin-left scale-x-0 ${panel.accent} transition-transform duration-700 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100 md:h-1`}
+              className={`absolute inset-x-0 top-0 z-10 h-0.5 origin-left scale-x-0 ${panel.accent} transition-transform duration-700 ease-out group-active:scale-x-100 group-hover:scale-x-100 group-focus-visible:scale-x-100 md:h-1`}
               aria-hidden
             />
 
             {i > 0 ? (
-              <span
-                className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-px bg-white/15 md:block"
-                aria-hidden
-              />
+              <>
+                <span
+                  className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-white/15 md:hidden"
+                  aria-hidden
+                />
+                <span
+                  className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-px bg-white/15 md:block"
+                  aria-hidden
+                />
+              </>
             ) : null}
 
-            <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-6 pb-10 pt-24 md:min-h-0 md:h-full md:px-8 md:pb-12 lg:px-10 lg:pb-14">
+            <div className="relative z-10 flex h-full flex-row items-center gap-3 px-5 md:flex-col md:items-stretch md:justify-end md:px-8 md:pb-12 md:pt-24 lg:px-10 lg:pb-14">
               <p
-                className={`mb-auto pt-1 font-[family-name:var(--font-fraunces)] text-6xl leading-none opacity-20 md:text-7xl lg:text-8xl ${panel.accentText}`}
+                className={`shrink-0 font-[family-name:var(--font-fraunces)] text-2xl leading-none opacity-25 md:mb-auto md:pt-1 md:text-7xl lg:text-8xl ${panel.accentText}`}
                 aria-hidden
               >
                 {panel.index}
               </p>
 
               <motion.div
+                className="min-w-0 flex-1 md:flex-none"
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -133,14 +140,14 @@ export default function LandingTriptych() {
                   {panel.kicker}
                 </p>
                 <h2
-                  className={`mt-2 text-4xl leading-[0.95] [font-size:clamp(2rem,12cqw,3.75rem)] ${panel.titleClass}`}
+                  className={`mt-1 truncate text-3xl leading-[0.95] md:mt-2 md:overflow-visible md:text-4xl md:[font-size:clamp(2rem,12cqw,3.75rem)] ${panel.titleClass}`}
                 >
                   {panel.title}
                 </h2>
-                <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/78 opacity-100 transition duration-500 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100">
+                <p className="mt-4 hidden max-w-sm text-sm leading-relaxed text-white/78 transition duration-500 md:block md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100">
                   {panel.line}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold tracking-wide">
+                <span className="mt-6 hidden items-center gap-2 text-sm font-semibold tracking-wide md:inline-flex">
                   {panel.cta}
                   <span
                     className={`inline-block transition-transform duration-500 group-hover:translate-x-1.5 ${panel.accentText}`}
@@ -149,6 +156,13 @@ export default function LandingTriptych() {
                   </span>
                 </span>
               </motion.div>
+
+              <span
+                aria-hidden
+                className={`ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-base backdrop-blur-sm transition-transform duration-300 group-active:scale-90 md:hidden`}
+              >
+                <span className={panel.accentText}>→</span>
+              </span>
             </div>
           </Link>
         ))}
