@@ -21,6 +21,19 @@ const points = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+};
+
 export default function WhyMarphone() {
   return (
     <section className="bg-white">
@@ -40,25 +53,29 @@ export default function WhyMarphone() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
           {points.map((point, i) => (
-            <motion.div
+            <motion.li
               key={point.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
+              variants={item}
+              className="group rounded-2xl border border-black/8 bg-surface p-6 shadow-sm transition hover:border-brand-blue/30 hover:shadow-md md:p-7"
             >
-              <p className="font-display text-sm font-semibold text-brand-blue">
-                0{i + 1}
-              </p>
-              <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/10 font-display text-lg font-semibold text-brand-blue">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-5 font-display text-xl font-semibold tracking-tight">
                 {point.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{point.body}</p>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </motion.ul>
       </div>
     </section>
   );
