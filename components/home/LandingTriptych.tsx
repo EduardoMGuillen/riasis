@@ -118,7 +118,7 @@ export default function LandingTriptych() {
 
             <div className="relative z-10 flex h-full flex-row items-center gap-3 px-5 md:flex-col md:items-stretch md:justify-end md:px-8 md:pb-12 md:pt-24 lg:px-10 lg:pb-14">
               <p
-                className={`shrink-0 font-[family-name:var(--font-fraunces)] text-2xl leading-none opacity-25 md:mb-auto md:pt-1 md:text-7xl lg:text-8xl ${panel.accentText}`}
+                className={`shrink-0 text-2xl leading-none opacity-25 md:mb-auto md:pt-1 md:text-7xl lg:text-8xl ${panel.titleClass} ${panel.accentText}`}
                 aria-hidden
               >
                 {panel.index}
