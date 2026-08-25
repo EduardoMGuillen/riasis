@@ -2,8 +2,8 @@
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
-import { CONTACT_EMAIL } from "@/lib/constants";
-import { mailtoUrl } from "@/lib/contact";
+import { CONTACT_EMAIL, WHATSAPP_DISPLAY } from "@/lib/constants";
+import { mailtoUrl, whatsappUrl } from "@/lib/contact";
 
 export default function CtaBand() {
   const [sent, setSent] = useState(false);
@@ -48,10 +48,14 @@ export default function CtaBand() {
               <dt className="text-white/50">Teléfono / WhatsApp</dt>
               <dd>
                 <a
-                  href="tel:+50499990000"
+                  href={whatsappUrl(
+                    "Hola, quisiera cotizar un proyecto con Riasis Verde",
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-medium text-white transition hover:text-rv-glow"
                 >
-                  +504 9999-0000
+                  {WHATSAPP_DISPLAY}
                 </a>
               </dd>
             </div>

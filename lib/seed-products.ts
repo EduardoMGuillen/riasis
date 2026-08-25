@@ -23,7 +23,11 @@ export const SUGGESTED_BRANDS: string[] = [
   "Honor",
 ];
 
-/** Catálogo semilla con fotos locales en /public/products */
+/**
+ * Catálogo semilla con fotos de referencia (Unsplash, licencia libre).
+ * Sustituir por fotos reales del producto desde el panel de administración
+ * cuando estén disponibles.
+ */
 export const seedProducts: Product[] = [
   {
     slug: "iphone-17-pro-max",
@@ -37,7 +41,7 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Negro Titanio" }, { name: "Blanco Titanio" }, { name: "Azul Titanio" }, { name: "Naranja Titanio" }],
     specs: ["Chip A19 Pro", "Sistema de cámara Pro", "Pantalla Super Retina XDR", "Titanium"],
     featured: true,
-    image: "/products/iphone-17-pro-max.jpg",
+    image: "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-17-pro",
@@ -51,7 +55,7 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Negro Titanio" }, { name: "Blanco Titanio" }, { name: "Azul Titanio" }],
     specs: ["Chip A19 Pro", "Cámara Pro", "ProMotion 120 Hz", "USB-C"],
     featured: true,
-    image: "/products/iphone-17-pro.jpg",
+    image: "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-17",
@@ -65,7 +69,7 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Negro" }, { name: "Blanco" }, { name: "Azul" }, { name: "Rosa" }],
     specs: ["Chip A19", "Cámara dual avanzada", "Dynamic Island", "Ceramic Shield"],
     featured: true,
-    image: "/products/iphone-17.jpg",
+    image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-16-pro-max",
@@ -78,7 +82,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro Titanio" }, { name: "Desierto Titanio" }, { name: "Natural Titanio" }, { name: "Blanco Titanio" }],
     specs: ["Chip A18 Pro", "Cámara 48 MP", "Control de cámara", "Titanium"],
-    image: "/products/iphone-16-pro-max.jpg",
+    image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-16-pro",
@@ -91,7 +95,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro Titanio" }, { name: "Desierto Titanio" }, { name: "Natural Titanio" }, { name: "Blanco Titanio" }],
     specs: ["Chip A18 Pro", "Cámara Pro", "Action Button", "ProMotion"],
-    image: "/products/iphone-16-pro.jpg",
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-16",
@@ -104,7 +108,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB"],
     colors: [{ name: "Negro" }, { name: "Blanco" }, { name: "Rosa" }, { name: "Verde azulado" }, { name: "Ultramarino" }],
     specs: ["Chip A18", "Cámara Fusion 48 MP", "Botón de cámara", "USB-C"],
-    image: "/products/iphone-16.jpg",
+    image: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-16-plus",
@@ -117,7 +121,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB"],
     colors: [{ name: "Negro" }, { name: "Blanco" }, { name: "Rosa" }, { name: "Verde azulado" }, { name: "Ultramarino" }],
     specs: ["Chip A18", "Pantalla 6.7\"", "Cámara Fusion", "USB-C"],
-    image: "/products/iphone-16-plus.jpg",
+    image: "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-15-pro-max",
@@ -130,7 +134,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro Titanio" }, { name: "Azul Titanio" }, { name: "Blanco Titanio" }, { name: "Titanio natural" }],
     specs: ["Chip A17 Pro", "Cámara 5x", "Action Button", "USB-C"],
-    image: "/products/iphone-15-pro-max.jpg",
+    image: "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-15-pro",
@@ -143,7 +147,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro Titanio" }, { name: "Azul Titanio" }, { name: "Blanco Titanio" }, { name: "Titanio natural" }],
     specs: ["Chip A17 Pro", "Cámara Pro", "Action Button", "USB-C"],
-    image: "/products/iphone-15-pro.jpg",
+    image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-15",
@@ -156,7 +160,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB"],
     colors: [{ name: "Negro" }, { name: "Azul" }, { name: "Verde" }, { name: "Amarillo" }, { name: "Rosa" }],
     specs: ["Chip A16", "Cámara 48 MP", "Dynamic Island", "USB-C"],
-    image: "/products/iphone-15.jpg",
+    image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "iphone-14-pro",
@@ -169,7 +173,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB"],
     colors: [{ name: "Negro espacial" }, { name: "Plata" }, { name: "Oro" }, { name: "Morado intenso" }],
     specs: ["Chip A16", "Always-On Display", "Cámara 48 MP", "Dynamic Island"],
-    image: "/products/iphone-14-pro.jpg",
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "galaxy-s25-ultra",
@@ -183,7 +187,7 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Negro Titanio" }, { name: "Gris Titanio" }, { name: "Azul Titanio" }, { name: "Plata" }],
     specs: ["Snapdragon elite", "S Pen", "Cámara 200 MP", "Gorilla Armor"],
     featured: true,
-    image: "/products/galaxy-s25-ultra.jpg",
+    image: "https://images.unsplash.com/photo-1551764046-eadb20826deb?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "galaxy-s25-plus",
@@ -196,7 +200,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB"],
     colors: [{ name: "Azul marino" }, { name: "Gris sombra" }, { name: "Plata" }, { name: "Negro" }],
     specs: ["Pantalla Dynamic AMOLED 2X", "Carga rápida", "IP68", "AI Galaxy"],
-    image: "/products/galaxy-s25-plus.jpg",
+    image: "https://images.unsplash.com/photo-1565967249821-083c4775e5bc?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "galaxy-s25",
@@ -209,7 +213,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB"],
     colors: [{ name: "Azul marino" }, { name: "Gris sombra" }, { name: "Plata" }, { name: "Negro" }],
     specs: ["AI Galaxy", "Cámara triple", "IP68", "120 Hz"],
-    image: "/products/galaxy-s25.jpg",
+    image: "https://images.unsplash.com/photo-1575718120842-54e388d8cc6f?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "galaxy-z-fold6",
@@ -222,7 +226,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro fantasma" }, { name: "Plata sombra" }, { name: "Rosa" }, { name: "Azul marino" }],
     specs: ["Pantalla plegable", "Multitarea", "S Pen compatible", "IPX8"],
-    image: "/products/galaxy-z-fold6.jpg",
+    image: "https://images.unsplash.com/photo-1565967249821-083c4775e5bc?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "galaxy-z-flip6",
@@ -235,7 +239,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB"],
     colors: [{ name: "Azul sombra" }, { name: "Plata sombra" }, { name: "Mint" }, { name: "Amarillo" }],
     specs: ["Flex Window", "AI Galaxy", "Compacto", "IPX8"],
-    image: "/products/galaxy-z-flip6.jpg",
+    image: "https://images.unsplash.com/photo-1551764046-eadb20826deb?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "pixel-9-pro-xl",
@@ -248,7 +252,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB"],
     colors: [{ name: "Obsidiana" }, { name: "Porcelana" }, { name: "Hazel" }, { name: "Rosa" }],
     specs: ["Tensor G4", "Gemini Nano", "Zoom Pro", "Pantalla LTPO"],
-    image: "/products/pixel-9-pro-xl.jpg",
+    image: "https://images.unsplash.com/photo-1724322664367-5cc0f47b5d9d?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "pixel-9-pro",
@@ -261,7 +265,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB", "512 GB"],
     colors: [{ name: "Obsidiana" }, { name: "Porcelana" }, { name: "Hazel" }, { name: "Rosa" }],
     specs: ["Tensor G4", "Cámara Pro", "Magic Editor", "7 años de updates"],
-    image: "/products/pixel-9-pro.jpg",
+    image: "https://images.unsplash.com/photo-1749953680414-62d2afc6c29c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "pixel-9",
@@ -274,7 +278,7 @@ export const seedProducts: Product[] = [
     storage: ["128 GB", "256 GB"],
     colors: [{ name: "Obsidiana" }, { name: "Porcelana" }, { name: "Peonía" }, { name: "Verde invierno" }],
     specs: ["Tensor G4", "Gemini", "Carga inalámbrica", "IP68"],
-    image: "/products/pixel-9.jpg",
+    image: "https://images.unsplash.com/photo-1724322664367-5cc0f47b5d9d?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "xiaomi-15-ultra",
@@ -287,7 +291,7 @@ export const seedProducts: Product[] = [
     storage: ["512 GB", "1 TB"],
     colors: [{ name: "Negro" }, { name: "Blanco" }, { name: "Verde" }],
     specs: ["Leica Optics", "Snapdragon elite", "Carga hiper rápida", "IP68"],
-    image: "/products/xiaomi-15-ultra.jpg",
+    image: "https://images.unsplash.com/photo-1697981812520-d1e056308e52?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "oneplus-13",
@@ -300,7 +304,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro" }, { name: "Azul" }, { name: "Blanco" }],
     specs: ["Snapdragon elite", "Hasselblad", "Carga 100W", "OxygenOS"],
-    image: "/products/oneplus-13.jpg",
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "sony-xperia-1-vi",
@@ -313,7 +317,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB"],
     colors: [{ name: "Negro" }, { name: "Plata" }, { name: "Verde khaki" }],
     specs: ["Pantalla 4K CinemaWide", "Óptica ZEISS", "3.5 mm jack", "MicroSD"],
-    image: "/products/sony-xperia-1-vi.jpg",
+    image: "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "oppo-find-x8-pro",
@@ -326,7 +330,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB"],
     colors: [{ name: "Negro espacial" }, { name: "Azul glaciares" }, { name: "Blanco" }],
     specs: ["Pantalla LTPO", "Zoom periscopio", "Carga rápida", "IP68"],
-    image: "/products/oppo-find-x8-pro.jpg",
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "honor-magic7-pro",
@@ -339,7 +343,7 @@ export const seedProducts: Product[] = [
     storage: ["256 GB", "512 GB", "1 TB"],
     colors: [{ name: "Negro" }, { name: "Gris lunar" }, { name: "Naranja" }],
     specs: ["Snapdragon elite", "Cámara AI", "Pantalla silicon-OLED", "IP68"],
-    image: "/products/honor-magic7-pro.jpg",
+    image: "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "playstation-5",
@@ -353,7 +357,7 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Blanco / Negro" }],
     specs: ["4K UHD", "Ray tracing", "SSD ultrarrápido", "Tempest 3D Audio"],
     featured: true,
-    image: "/products/playstation-5.jpg",
+    image: "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "dualsense-ps5",
@@ -372,7 +376,7 @@ export const seedProducts: Product[] = [
     ],
     specs: ["Háptica avanzada", "Gatillos adaptativos", "Micrófono integrado", "USB-C"],
     featured: true,
-    image: "/products/dualsense-ps5.jpg",
+    image: "https://images.unsplash.com/photo-1670535787435-63a39a5b8d32?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "nintendo-switch-oled",
@@ -390,7 +394,7 @@ export const seedProducts: Product[] = [
     ],
     specs: ["Modo TV / mesa / portátil", "Joy-Con desmontables", "Modo multijugador local"],
     featured: true,
-    image: "/products/nintendo-switch-oled.jpg",
+    image: "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "nintendo-switch-pro",
@@ -403,7 +407,7 @@ export const seedProducts: Product[] = [
     storage: [],
     colors: [{ name: "Negro" }],
     specs: ["Inalámbrico", "Amiibo NFC", "Batería de larga duración", "USB-C"],
-    image: "/products/nintendo-switch-pro.jpg",
+    image: "https://images.unsplash.com/photo-1576143248608-1c3ad80fee30?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "jbl-flip-6",
@@ -422,7 +426,7 @@ export const seedProducts: Product[] = [
     ],
     specs: ["Bluetooth", "IP67", "PartyBoost", "Hasta 12 h de batería"],
     featured: true,
-    image: "/products/jbl-flip-6.jpg",
+    image: "https://images.unsplash.com/photo-1767796427185-ada2bf414860?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "jbl-charge-5",
@@ -441,7 +445,7 @@ export const seedProducts: Product[] = [
     ],
     specs: ["Bluetooth", "IP67", "Carga dispositivos", "Hasta 20 h de batería"],
     featured: true,
-    image: "/products/jbl-charge-5.jpg",
+    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "airpods-pro-2",
@@ -455,7 +459,7 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Blanco" }],
     specs: ["ANC", "Audio espacial", "Chip H2", "Estuche MagSafe / USB-C"],
     featured: true,
-    image: "/products/airpods-pro-2.jpg",
+    image: "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?auto=format&fit=crop&w=1200&q=80",
   },
   {
     slug: "airpods-4",
@@ -469,6 +473,6 @@ export const seedProducts: Product[] = [
     colors: [{ name: "Blanco" }],
     specs: ["Chip H2", "Emparejamiento instantáneo", "Estuche de carga", "Siri"],
     featured: true,
-    image: "/products/airpods-4.jpg",
+    image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=1200&q=80",
   },
 ];

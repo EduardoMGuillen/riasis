@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { CONTACT_EMAIL, NEXUS_URL } from "@/lib/constants";
-import { mailtoUrl } from "@/lib/contact";
+import { CONTACT_EMAIL, NEXUS_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
+import { mailtoUrl, whatsappUrl } from "@/lib/contact";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -66,8 +66,15 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
               <li>
-                <a href="tel:+50499990000" className="transition hover:text-brand-600">
-                  +504 9999-0000
+                <a
+                  href={whatsappUrl(
+                    "Hola, quisiera pedir un presupuesto con Riasis Construcción",
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-brand-600"
+                >
+                  WhatsApp {WHATSAPP_DISPLAY}
                 </a>
               </li>
               <li>
