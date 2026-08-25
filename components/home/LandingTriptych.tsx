@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { NEXUS_URL } from "@/lib/constants";
 
 const panels = [
   {
@@ -13,7 +14,7 @@ const panels = [
     line: "Jardines y paisajes que se viven con el clima de Honduras.",
     cta: "Entrar",
     image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=3840&q=90",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2400&q=75",
     alt: "Patio tropical con piscina, palmeras y jardín residencial",
     titleClass: "font-[family-name:var(--font-fraunces)]",
     accent: "bg-rv-moss",
@@ -28,7 +29,7 @@ const panels = [
     line: "Smartphones de alta gama. Vitrina online, compra por WhatsApp.",
     cta: "Entrar",
     image:
-      "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=3840&q=90",
+      "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=2400&q=75",
     alt: "Smartphone de alta gama y audífonos sobre superficie de madera",
     titleClass: "font-[family-name:var(--font-space)] font-semibold tracking-tight",
     accent: "bg-brand-blue",
@@ -43,7 +44,7 @@ const panels = [
     line: "Obra nueva, reformas y dirección de obra. Plazos que se cumplen.",
     cta: "Entrar",
     image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=3840&q=90",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=75",
     alt: "Equipo en una obra de construcción con estructura y acero",
     titleClass: "font-[family-name:var(--font-bebas)] tracking-wide",
     accent: "bg-brand-500",
@@ -59,11 +60,21 @@ export default function LandingTriptych() {
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between px-5 py-4 md:px-8 md:py-7"
+        className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-center justify-between px-5 py-4 md:px-8 md:py-7"
       >
-        <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-white/80">
-          Riasis
-        </p>
+        <span className="flex items-center gap-2">
+          <Image
+            src="/logos/riasis-grupo-icon.png"
+            alt=""
+            width={26}
+            height={26}
+            priority
+            className="h-6 w-6 rounded-[7px] shadow-sm md:h-[26px] md:w-[26px]"
+          />
+          <span className="text-[11px] font-semibold uppercase tracking-[0.32em] text-white/80">
+            Riasis
+          </span>
+        </span>
         <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/55">
           Honduras
         </p>
@@ -87,9 +98,9 @@ export default function LandingTriptych() {
                 src={panel.image}
                 alt={panel.alt}
                 fill
-                priority
-                quality={90}
-                sizes="(max-width: 767px) 100vw, 80vw"
+                {...(i === 0 ? { priority: true } : { loading: "eager" as const })}
+                quality={80}
+                sizes="(max-width: 767px) 100vw, 45vw"
                 className="object-cover object-center transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-active:scale-105 group-hover:scale-110 group-focus-visible:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div className={`absolute inset-0 ${panel.wash}`} />
@@ -167,6 +178,25 @@ export default function LandingTriptych() {
           </Link>
         ))}
       </div>
+
+      <motion.footer
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-30 flex items-center justify-between px-5 py-3 md:px-8 md:py-4"
+      >
+        <p className="text-[10px] text-white/50 md:text-[11px]">
+          © {new Date().getFullYear()} Riasis
+        </p>
+        <a
+          href={NEXUS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pointer-events-auto text-[10px] text-white/50 transition hover:text-white/85 md:text-[11px]"
+        >
+          Powered by Nexus Global
+        </a>
+      </motion.footer>
     </main>
   );
 }

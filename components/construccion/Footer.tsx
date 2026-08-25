@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_EMAIL, NEXUS_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
 import { mailtoUrl, whatsappUrl } from "@/lib/contact";
@@ -9,9 +10,13 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr] md:gap-16">
           <div>
-            <p className="font-display text-2xl tracking-wide text-slate-900">
-              Riasis <span className="text-brand-600">Construcción</span>
-            </p>
+            <Image
+              src="/logos/riasis-construccion.png"
+              alt="Riasis Construcción"
+              width={880}
+              height={264}
+              className="h-10 w-auto"
+            />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
               Construcción, reformas y mantenimiento con equipo propio y
               compromiso de plazos. Sustituye este texto por la historia real

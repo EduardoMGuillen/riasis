@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
@@ -40,11 +41,23 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
         <a
           href="/verde#inicio"
-          className={`font-[family-name:var(--font-display)] text-xl tracking-tight transition-colors md:text-2xl ${
-            scrolled || open ? "text-rv-forest" : "text-white"
-          }`}
+          className="flex items-center gap-2.5"
+          aria-label="Riasis Verde"
         >
-          Riasis <span className="font-medium text-rv-moss">Verde</span>
+          <Image
+            src="/logos/riasis-verde-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-[9px] shadow-sm"
+          />
+          <span
+            className={`font-[family-name:var(--font-display)] text-xl tracking-tight transition-colors md:text-2xl ${
+              scrolled || open ? "text-rv-forest" : "text-white"
+            }`}
+          >
+            Riasis <span className="font-medium text-rv-moss">Verde</span>
+          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

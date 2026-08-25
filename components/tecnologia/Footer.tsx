@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   CONTACT_EMAIL,
@@ -15,9 +16,18 @@ export default function Footer() {
     <footer className="bg-black text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr] md:px-8">
         <div>
-          <p className="font-display text-xl font-semibold tracking-tight">
-            Riasis <span className="text-brand-blue">Tecnología</span>
-          </p>
+          <div className="flex items-center gap-2.5">
+            <Image
+              src="/logos/riasis-tecnologia-icon.png"
+              alt=""
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-[9px] shadow-sm"
+            />
+            <p className="font-display text-xl font-semibold tracking-tight">
+              Riasis <span className="text-brand-blue">Tecnología</span>
+            </p>
+          </div>
           <p className="mt-4 max-w-sm text-sm text-white/65">
             Smartphones de alta gama en Honduras. Vitrina online, compra por
             WhatsApp e Instagram.
