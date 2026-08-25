@@ -144,27 +144,25 @@ body {
 .landing-triptych {
   display: flex;
   flex-direction: column;
+  height: 100svh;
+  overflow: hidden;
 }
 
 .landing-panel {
   position: relative;
-  min-height: 100svh;
-  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  flex: 1 1 0;
   overflow: hidden;
   container-type: inline-size;
 }
 
 @media (min-width: 768px) {
   .landing-triptych {
-    height: 100svh;
     flex-direction: row;
-    overflow: hidden;
   }
 
   .landing-panel {
-    min-height: 0;
-    height: 100%;
-    flex: 1 1 0;
     min-width: 0;
     transition: flex 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   }
