@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import HeaderSearch from "@/components/tecnologia/HeaderSearch";
@@ -44,12 +45,23 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-5 md:h-18 md:gap-5 md:px-8">
         <Link
           href="/tecnologia"
-          className={`shrink-0 font-display text-lg font-semibold tracking-tight transition-colors md:text-xl ${
-            scrolled || open ? "text-foreground" : "text-white"
-          }`}
+          className="flex shrink-0 items-center gap-2.5"
           aria-label="Riasis Tecnología"
         >
-          Riasis <span className="text-brand-blue">Tecnología</span>
+          <Image
+            src="/logos/riasis-tecnologia-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-[9px] shadow-sm"
+          />
+          <span
+            className={`font-display text-lg font-semibold tracking-tight transition-colors md:text-xl ${
+              scrolled || open ? "text-foreground" : "text-white"
+            }`}
+          >
+            Riasis <span className="text-brand-blue">Tecnología</span>
+          </span>
         </Link>
 
         <Link

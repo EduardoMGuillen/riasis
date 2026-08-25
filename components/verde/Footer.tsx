@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_EMAIL, NEXUS_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
 import { mailtoUrl, whatsappUrl } from "@/lib/contact";
@@ -9,10 +10,14 @@ export default function Footer() {
     <footer className="border-t border-rv-mist bg-rv-fog">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr] md:px-8 md:py-16">
         <div>
-          <p className="font-display text-2xl text-rv-forest">
-            Riasis <span className="text-rv-moss">Verde</span>
-          </p>
-          <p className="mt-3 max-w-sm text-rv-stone leading-relaxed">
+          <Image
+            src="/logos/riasis-verde.png"
+            alt="Riasis Verde"
+            width={880}
+            height={264}
+            className="h-10 w-auto"
+          />
+          <p className="mt-4 max-w-sm text-rv-stone leading-relaxed">
             Landscaping y jardinería en Honduras. Diseñamos exteriores con
             identidad local y cuidado sostenible.
           </p>

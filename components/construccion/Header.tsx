@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const nav = [
@@ -41,11 +42,23 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/Construccion"
-            className={`font-display text-xl tracking-wide transition-colors md:text-2xl ${
-              scrolled || open ? "text-slate-900" : "text-white"
-            }`}
+            className="flex items-center gap-2.5"
+            aria-label="Riasis Construcción"
           >
-            Riasis <span className="text-brand-500">Construcción</span>
+            <Image
+              src="/logos/riasis-construccion-icon.png"
+              alt=""
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-[9px] shadow-sm"
+            />
+            <span
+              className={`font-display text-xl tracking-wide transition-colors md:text-2xl ${
+                scrolled || open ? "text-slate-900" : "text-white"
+              }`}
+            >
+              Riasis <span className="text-brand-500">Construcción</span>
+            </span>
           </Link>
           <Link
             href="/"
