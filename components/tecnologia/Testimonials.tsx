@@ -19,7 +19,7 @@ const quotes = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white">
+    <section className="bg-surface">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,21 +38,27 @@ export default function Testimonials() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {quotes.map((q, i) => (
-            <motion.blockquote
+            <motion.figure
               key={q.author}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              className="border-t border-black/10 pt-6"
+              className="relative rounded-2xl border border-black/8 bg-white p-8 shadow-sm"
             >
-              <p className="text-lg leading-relaxed text-foreground/90">
-                “{q.text}”
-              </p>
-              <footer className="mt-5 text-sm font-semibold text-muted">
-                {q.author}
-              </footer>
-            </motion.blockquote>
+              <span
+                className="font-display text-6xl leading-none text-brand-blue/25"
+                aria-hidden
+              >
+                “
+              </span>
+              <blockquote className="-mt-4 leading-relaxed text-foreground/90">
+                {q.text}
+              </blockquote>
+              <figcaption className="mt-6 border-t border-black/8 pt-6">
+                <p className="font-semibold text-foreground">{q.author}</p>
+              </figcaption>
+            </motion.figure>
           ))}
         </div>
       </div>

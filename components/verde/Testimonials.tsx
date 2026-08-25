@@ -25,43 +25,41 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonios" className="bg-rv-white py-24 md:py-32">
+    <section id="testimonios" className="bg-rv-fog py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="mb-14 max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-leaf">
             Clientes
           </p>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl text-rv-ink md:text-5xl">
+          <h2 className="font-display text-3xl text-rv-ink md:text-5xl">
             Voces de quienes ya caminan su jardín.
           </h2>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
+        <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((item, i) => (
-            <motion.blockquote
+            <motion.figure
               key={item.author}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.55, delay: i * 0.1 }}
-              className="relative border-t border-rv-mist pt-8"
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.45, delay: i * 0.08 }}
+              className="relative rounded-2xl border border-rv-mist bg-rv-white p-8 shadow-sm"
             >
               <span
-                className="absolute -top-3 left-0 font-[family-name:var(--font-display)] text-5xl leading-none text-rv-sage/60"
+                className="font-display text-6xl leading-none text-rv-sage/40"
                 aria-hidden
               >
                 “
               </span>
-              <p className="text-lg leading-relaxed text-rv-charcoal md:text-[1.15rem]">
+              <blockquote className="-mt-4 leading-relaxed text-rv-charcoal">
                 {item.quote}
-              </p>
-              <footer className="mt-6">
-                <cite className="not-italic font-semibold text-rv-forest">
-                  {item.author}
-                </cite>
-                <p className="text-sm text-rv-stone">{item.role}</p>
-              </footer>
-            </motion.blockquote>
+              </blockquote>
+              <figcaption className="mt-6 border-t border-rv-mist pt-6">
+                <p className="font-semibold text-rv-forest">{item.author}</p>
+                <p className="mt-1 text-sm text-rv-stone">{item.role}</p>
+              </figcaption>
+            </motion.figure>
           ))}
         </div>
       </div>

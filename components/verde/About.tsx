@@ -63,9 +63,13 @@ export default function About() {
             {points.map((point) => (
               <li key={point} className="flex items-start gap-3 text-rv-charcoal">
                 <span
-                  className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-rv-moss"
+                  className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-rv-moss/15 text-rv-forest"
                   aria-hidden
-                />
+                >
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
                 <span>{point}</span>
               </li>
             ))}

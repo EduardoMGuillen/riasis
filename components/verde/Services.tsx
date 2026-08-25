@@ -29,13 +29,17 @@ const services = [
   },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: (i: number) => ({
+const container = {
+  hidden: { opacity: 0 },
+  show: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as const },
-  }),
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
 };
 
 export default function Services() {
@@ -47,34 +51,36 @@ export default function Services() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-leaf">
             Servicios
           </p>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl text-rv-ink text-balance md:text-5xl">
+          <h2 className="font-display text-3xl text-rv-ink text-balance md:text-5xl">
             Del primer bosquejo al jardín que se mantiene vivo.
           </h2>
         </div>
 
-        <ul className="divide-y divide-rv-mist/80 border-y border-rv-mist/80">
-          {services.map((service, i) => (
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid gap-6 sm:grid-cols-2"
+        >
+          {services.map((service) => (
             <motion.li
               key={service.num}
-              custom={i}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-60px" }}
-              className="group grid gap-4 py-8 md:grid-cols-[5rem_1fr_1.4fr] md:items-baseline md:gap-10 md:py-10"
+              variants={item}
+              className="group rounded-2xl border border-rv-mist bg-rv-white/80 p-6 shadow-sm backdrop-blur-sm transition hover:border-rv-moss/40 hover:shadow-md md:p-8"
             >
-              <span className="font-[family-name:var(--font-display)] text-sm text-rv-sage md:text-base">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-rv-moss/15 font-display text-lg text-rv-forest">
                 {service.num}
               </span>
-              <h3 className="text-xl font-semibold text-rv-charcoal transition group-hover:text-rv-forest md:text-2xl">
+              <h3 className="mt-5 text-xl font-semibold text-rv-charcoal transition group-hover:text-rv-forest md:text-2xl">
                 {service.title}
               </h3>
-              <p className="text-rv-stone leading-relaxed md:text-[1.05rem]">
+              <p className="mt-2 leading-relaxed text-rv-stone md:text-[1.05rem]">
                 {service.description}
               </p>
             </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

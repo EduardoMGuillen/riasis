@@ -59,6 +59,22 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.1, duration: 0.8 }}
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 md:block"
+        aria-hidden
+      >
+        <div className="flex h-10 w-6 items-start justify-center rounded-full border border-white/35 p-1.5">
+          <motion.span
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="block h-1.5 w-1.5 rounded-full bg-white"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }

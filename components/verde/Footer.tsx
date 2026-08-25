@@ -1,46 +1,94 @@
-const NEXUS_URL = "https://www.nexusglobalsuministros.com/";
-
-const quickLinks = [
-  { href: "/verde#servicios", label: "Servicios" },
-  { href: "/verde#sobre", label: "Nosotros" },
-  { href: "/verde#proyectos", label: "Proyectos" },
-  { href: "/verde#contacto", label: "Contacto" },
-  { href: "/", label: "Grupo Riasis" },
-  { href: "/tecnologia", label: "Riasis Tecnología" },
-  { href: "/Construccion", label: "Riasis Construcción" },
-];
+import Link from "next/link";
+import { CONTACT_EMAIL, NEXUS_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
+import { mailtoUrl, whatsappUrl } from "@/lib/contact";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-rv-mist bg-rv-fog">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr] md:px-8 md:py-16">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr] md:px-8 md:py-16">
         <div>
-          <p className="font-[family-name:var(--font-display)] text-2xl text-rv-forest">
+          <p className="font-display text-2xl text-rv-forest">
             Riasis <span className="text-rv-moss">Verde</span>
           </p>
           <p className="mt-3 max-w-sm text-rv-stone leading-relaxed">
             Landscaping y jardinería en Honduras. Diseñamos exteriores con
             identidad local y cuidado sostenible.
           </p>
+          <p className="mt-4 text-sm text-rv-stone">
+            <Link href="/" className="transition hover:text-rv-forest">
+              Grupo Riasis
+            </Link>
+            {" · "}
+            <Link href="/tecnologia" className="transition hover:text-rv-forest">
+              Riasis Tecnología
+            </Link>
+            {" · "}
+            <Link href="/Construccion" className="transition hover:text-rv-forest">
+              Riasis Construcción
+            </Link>
+          </p>
         </div>
 
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rv-leaf">
-            Enlaces
+            Explorar
           </p>
-          <ul className="mt-4 grid grid-cols-2 gap-2">
-            {quickLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="text-rv-charcoal transition hover:text-rv-forest"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+          <ul className="mt-4 space-y-2 text-rv-charcoal">
+            <li>
+              <a href="/verde#servicios" className="transition hover:text-rv-forest">
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a href="/verde#sobre" className="transition hover:text-rv-forest">
+                Nosotros
+              </a>
+            </li>
+            <li>
+              <a href="/verde#proyectos" className="transition hover:text-rv-forest">
+                Proyectos
+              </a>
+            </li>
+            <li>
+              <a href="/verde#testimonios" className="transition hover:text-rv-forest">
+                Clientes
+              </a>
+            </li>
+            <li>
+              <a href="/verde#contacto" className="transition hover:text-rv-forest">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rv-leaf">
+            Contacto
+          </p>
+          <ul className="mt-4 space-y-2 text-rv-charcoal">
+            <li>
+              <a
+                href={whatsappUrl(
+                  "Hola, quisiera cotizar un proyecto con Riasis Verde",
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-rv-forest"
+              >
+                WhatsApp {WHATSAPP_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <a href={mailtoUrl()} className="transition hover:text-rv-forest">
+                {CONTACT_EMAIL}
+              </a>
+            </li>
+            <li className="text-rv-stone">
+              Francisco Morazán y alrededores
+            </li>
           </ul>
         </div>
       </div>

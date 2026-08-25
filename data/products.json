@@ -38,7 +38,7 @@
       "Titanium"
     ],
     "featured": true,
-    "image": "/products/iphone-17-pro-max.jpg",
+    "image": "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -75,7 +75,7 @@
       "USB-C"
     ],
     "featured": true,
-    "image": "/products/iphone-17-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -116,7 +116,7 @@
       "Ceramic Shield"
     ],
     "featured": true,
-    "image": "/products/iphone-17.jpg",
+    "image": "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -156,7 +156,7 @@
       "Control de cámara",
       "Titanium"
     ],
-    "image": "/products/iphone-16-pro-max.jpg",
+    "image": "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -197,7 +197,7 @@
       "Action Button",
       "ProMotion"
     ],
-    "image": "/products/iphone-16-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -241,7 +241,7 @@
       "Botón de cámara",
       "USB-C"
     ],
-    "image": "/products/iphone-16.jpg",
+    "image": "https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -285,7 +285,7 @@
       "Cámara Fusion",
       "USB-C"
     ],
-    "image": "/products/iphone-16-plus.jpg",
+    "image": "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -325,7 +325,7 @@
       "Action Button",
       "USB-C"
     ],
-    "image": "/products/iphone-15-pro-max.jpg",
+    "image": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -366,7 +366,7 @@
       "Action Button",
       "USB-C"
     ],
-    "image": "/products/iphone-15-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -410,7 +410,7 @@
       "Dynamic Island",
       "USB-C"
     ],
-    "image": "/products/iphone-15.jpg",
+    "image": "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -450,7 +450,7 @@
       "Cámara 48 MP",
       "Dynamic Island"
     ],
-    "image": "/products/iphone-14-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -491,7 +491,7 @@
       "Gorilla Armor"
     ],
     "featured": true,
-    "image": "/products/galaxy-s25-ultra.jpg",
+    "image": "https://images.unsplash.com/photo-1551764046-eadb20826deb?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -530,7 +530,7 @@
       "IP68",
       "AI Galaxy"
     ],
-    "image": "/products/galaxy-s25-plus.jpg",
+    "image": "https://images.unsplash.com/photo-1565967249821-083c4775e5bc?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -569,7 +569,7 @@
       "IP68",
       "120 Hz"
     ],
-    "image": "/products/galaxy-s25.jpg",
+    "image": "https://images.unsplash.com/photo-1575718120842-54e388d8cc6f?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -609,7 +609,7 @@
       "S Pen compatible",
       "IPX8"
     ],
-    "image": "/products/galaxy-z-fold6.jpg",
+    "image": "https://images.unsplash.com/photo-1565967249821-083c4775e5bc?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -648,7 +648,7 @@
       "Compacto",
       "IPX8"
     ],
-    "image": "/products/galaxy-z-flip6.jpg",
+    "image": "https://images.unsplash.com/photo-1551764046-eadb20826deb?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -688,7 +688,7 @@
       "Zoom Pro",
       "Pantalla LTPO"
     ],
-    "image": "/products/pixel-9-pro-xl.jpg",
+    "image": "https://images.unsplash.com/photo-1724322664367-5cc0f47b5d9d?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -728,7 +728,7 @@
       "Magic Editor",
       "7 años de updates"
     ],
-    "image": "/products/pixel-9-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1749953680414-62d2afc6c29c?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -767,7 +767,7 @@
       "Carga inalámbrica",
       "IP68"
     ],
-    "image": "/products/pixel-9.jpg",
+    "image": "https://images.unsplash.com/photo-1724322664367-5cc0f47b5d9d?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -802,7 +802,7 @@
       "Carga hiper rápida",
       "IP68"
     ],
-    "image": "/products/xiaomi-15-ultra.jpg",
+    "image": "https://images.unsplash.com/photo-1697981812520-d1e056308e52?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -838,7 +838,7 @@
       "Carga 100W",
       "OxygenOS"
     ],
-    "image": "/products/oneplus-13.jpg",
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -873,7 +873,7 @@
       "3.5 mm jack",
       "MicroSD"
     ],
-    "image": "/products/sony-xperia-1-vi.jpg",
+    "image": "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -908,7 +908,7 @@
       "Carga rápida",
       "IP68"
     ],
-    "image": "/products/oppo-find-x8-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -944,7 +944,7 @@
       "Pantalla silicon-OLED",
       "IP68"
     ],
-    "image": "/products/honor-magic7-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -971,7 +971,7 @@
       "Tempest 3D Audio"
     ],
     "featured": true,
-    "image": "/products/playstation-5.jpg",
+    "image": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1008,7 +1008,7 @@
       "USB-C"
     ],
     "featured": true,
-    "image": "/products/dualsense-ps5.jpg",
+    "image": "https://images.unsplash.com/photo-1670535787435-63a39a5b8d32?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1043,7 +1043,7 @@
       "Modo multijugador local"
     ],
     "featured": true,
-    "image": "/products/nintendo-switch-oled.jpg",
+    "image": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1068,7 +1068,7 @@
       "USB-C"
     ],
     "featured": false,
-    "image": "/products/nintendo-switch-pro.jpg",
+    "image": "https://images.unsplash.com/photo-1576143248608-1c3ad80fee30?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1105,7 +1105,7 @@
       "Hasta 12 h de batería"
     ],
     "featured": true,
-    "image": "/products/jbl-flip-6.jpg",
+    "image": "https://images.unsplash.com/photo-1767796427185-ada2bf414860?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1142,7 +1142,7 @@
       "Hasta 20 h de batería"
     ],
     "featured": true,
-    "image": "/products/jbl-charge-5.jpg",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1167,7 +1167,7 @@
       "Estuche MagSafe / USB-C"
     ],
     "featured": true,
-    "image": "/products/airpods-pro-2.jpg",
+    "image": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   },
   {
@@ -1192,7 +1192,7 @@
       "Siri"
     ],
     "featured": true,
-    "image": "/products/airpods-4.jpg",
+    "image": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=1200&q=80",
     "soldOut": false
   }
 ]

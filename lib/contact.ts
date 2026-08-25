@@ -11,6 +11,11 @@ export function productPageUrl(slug: string, origin = getSiteOrigin()) {
   return base ? `${base}${path}` : path;
 }
 
+/** Enlace directo a WhatsApp con el número de contacto único del grupo Riasis. */
+export function whatsappUrl(text: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
 /**
  * Mensaje de interés por WhatsApp.
  * Si hay `productSlug`, incluye el enlace a la ficha del producto.
@@ -31,7 +36,7 @@ export function whatsappInterestUrl(
     text += `\n\n${productPageUrl(productSlug)}`;
   }
 
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  return whatsappUrl(text);
 }
 
 export function instagramUrl() {
