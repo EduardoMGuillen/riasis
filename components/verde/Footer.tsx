@@ -1,10 +1,12 @@
 const NEXUS_URL = "https://www.nexusglobalsuministros.com/";
 
 const quickLinks = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#sobre", label: "Nosotros" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/verde#servicios", label: "Servicios" },
+  { href: "/verde#sobre", label: "Nosotros" },
+  { href: "/verde#proyectos", label: "Proyectos" },
+  { href: "/verde#contacto", label: "Contacto" },
+  { href: "/", label: "Grupo Riasis" },
+  { href: "/tecnologia", label: "Riasis Tecnología" },
 ];
 
 export default function Footer() {

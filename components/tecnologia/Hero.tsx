@@ -1,0 +1,64 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { whatsappInterestUrl } from "@/lib/contact";
+
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=2400&q=80";
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-[100svh] overflow-hidden bg-black text-white">
+      <div className="absolute inset-0">
+        <Image
+          src={HERO_IMAGE}
+          alt="Smartphones de alta gama — Riasis Tecnología"
+          fill
+          priority
+          quality={95}
+          className="object-cover object-center opacity-70"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black" />
+      </div>
+
+      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-28 md:justify-center md:px-8 md:pb-28">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-2xl"
+        >
+          <p className="mb-6 font-display text-2xl font-semibold tracking-tight md:text-3xl">
+            Riasis <span className="text-brand-blue">Tecnología</span>
+          </p>
+          <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl lg:text-7xl">
+            El próximo smartphone.
+            <span className="block text-brand-blue">Hoy en Riasis.</span>
+          </h1>
+          <p className="mt-5 max-w-lg text-base text-white/75 md:text-lg">
+            Teléfonos, tablets, audífonos y accesorios. Compra fácil por
+            WhatsApp o Instagram.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#catalogo"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+            >
+              Explorar catálogo
+            </a>
+            <a
+              href={whatsappInterestUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

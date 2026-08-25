@@ -1,0 +1,130 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import HeaderSearch from "@/components/tecnologia/HeaderSearch";
+import { INSTAGRAM_HANDLE } from "@/lib/constants";
+import { instagramUrl, whatsappInterestUrl } from "@/lib/contact";
+
+const nav = [
+  { href: "/tecnologia#destacados", label: "Destacados" },
+  { href: "/tecnologia#catalogo", label: "Catálogo" },
+  { href: "/tecnologia#nosotros", label: "Nosotros" },
+  { href: "/tecnologia#ubicacion", label: "Ubicación" },
+  { href: "/tecnologia#contacto", label: "Contacto" },
+];
+
+export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-[#ececef]/92 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-5 md:h-18 md:gap-5 md:px-8">
+        <Link
+          href="/tecnologia"
+          className="shrink-0 font-display text-lg font-semibold tracking-tight md:text-xl"
+          aria-label="Riasis Tecnología"
+        >
+          Riasis <span className="text-brand-blue">Tecnología</span>
+        </Link>
+
+        <Link
+          href="/"
+          className="hidden shrink-0 text-xs font-medium text-foreground/50 transition hover:text-foreground sm:inline"
+        >
+          Riasis
+        </Link>
+
+        <HeaderSearch className="hidden min-w-0 flex-1 md:block md:max-w-[220px] lg:max-w-xs" />
+
+        <nav className="ml-auto hidden items-center gap-6 lg:flex xl:gap-8">
+          {nav.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-foreground/70 transition hover:text-foreground"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden shrink-0 items-center gap-3 md:flex">
+          <a
+            href={instagramUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-sm font-medium text-foreground/70 transition hover:text-brand-blue xl:inline"
+          >
+            {INSTAGRAM_HANDLE}
+          </a>
+          <a
+            href={whatsappInterestUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-brand-blue px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-blue-dark"
+          >
+            WhatsApp
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/10 md:ml-0 lg:hidden"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="sr-only">Menú</span>
+          <div className="flex w-5 flex-col gap-1.5">
+            <span
+              className={`h-0.5 bg-black transition ${open ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span
+              className={`h-0.5 bg-black transition ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`h-0.5 bg-black transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </div>
+        </button>
+      </div>
+
+      <div className="border-t border-black/5 px-5 py-2 md:hidden">
+        <HeaderSearch />
+      </div>
+
+      {open ? (
+        <div className="border-t border-black/10 bg-[#ececef] px-5 py-6 lg:hidden">
+          <nav className="flex flex-col gap-4">
+            {nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-base font-medium"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href={instagramUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-blue"
+            >
+              Instagram {INSTAGRAM_HANDLE}
+            </a>
+            <a
+              href={whatsappInterestUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-brand-blue px-4 py-3 text-center font-semibold text-white"
+            >
+              Escribir por WhatsApp
+            </a>
+          </nav>
+        </div>
+      ) : null}
+    </header>
+  );
+}

@@ -15,6 +15,10 @@
   --rv-glow: #b7d4bf;
   --background: var(--rv-white);
   --foreground: var(--rv-charcoal);
+  --brand-blue: #2ea7ff;
+  --brand-blue-dark: #1a8fe0;
+  --muted: #5c5c62;
+  --surface: #f5f5f7;
 }
 
 @theme inline {
@@ -31,8 +35,18 @@
   --color-rv-moss: var(--rv-moss);
   --color-rv-sage: var(--rv-sage);
   --color-rv-glow: var(--rv-glow);
-  --font-display: var(--font-display);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-dark: var(--brand-blue-dark);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
   --font-sans: var(--font-sans);
+  --font-display: var(--font-fraunces);
+}
+
+.theme-tech {
+  --font-display: var(--font-space);
+  --background: #ffffff;
+  --foreground: #0a0a0a;
 }
 
 html {
@@ -48,6 +62,11 @@ body {
 ::selection {
   background: color-mix(in srgb, var(--rv-moss) 35%, transparent);
   color: var(--rv-ink);
+}
+
+.theme-tech ::selection {
+  background: color-mix(in srgb, var(--brand-blue) 35%, white);
+  color: #000;
 }
 
 .grain {

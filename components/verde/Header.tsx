@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#sobre", label: "Nosotros" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#testimonios", label: "Clientes" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/verde#servicios", label: "Servicios" },
+  { href: "/verde#sobre", label: "Nosotros" },
+  { href: "/verde#proyectos", label: "Proyectos" },
+  { href: "/verde#testimonios", label: "Clientes" },
+  { href: "/verde#contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -39,7 +39,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
         <a
-          href="#inicio"
+          href="/verde#inicio"
           className={`font-[family-name:var(--font-display)] text-xl tracking-tight transition-colors md:text-2xl ${
             scrolled || open ? "text-rv-forest" : "text-white"
           }`}
@@ -60,7 +60,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#contacto"
+            href="/verde#contacto"
             className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
               scrolled
                 ? "bg-rv-forest text-white hover:bg-rv-leaf"
@@ -124,7 +124,7 @@ export default function Header() {
               ))}
             </ul>
             <a
-              href="#contacto"
+              href="/verde#contacto"
               onClick={() => setOpen(false)}
               className="mt-4 block rounded-full bg-rv-forest px-5 py-3 text-center text-sm font-semibold text-white"
             >
