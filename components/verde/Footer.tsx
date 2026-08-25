@@ -7,6 +7,7 @@ const quickLinks = [
   { href: "/verde#contacto", label: "Contacto" },
   { href: "/", label: "Grupo Riasis" },
   { href: "/tecnologia", label: "Riasis Tecnología" },
+  { href: "/Construccion", label: "Riasis Construcción" },
 ];
 
 export default function Footer() {

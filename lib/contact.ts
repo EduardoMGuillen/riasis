@@ -1,4 +1,4 @@
-import { INSTAGRAM_URL, WHATSAPP_NUMBER } from "./constants";
+import { CONTACT_EMAIL, INSTAGRAM_URL, WHATSAPP_NUMBER } from "./constants";
 
 /** Origen público de la tienda (WhatsApp / enlaces). */
 export function getSiteOrigin() {
@@ -36,4 +36,8 @@ export function whatsappInterestUrl(
 
 export function instagramUrl() {
   return INSTAGRAM_URL;
+}
+
+export function mailtoUrl() {
+  return `mailto:${CONTACT_EMAIL}`;
 }

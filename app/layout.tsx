@@ -20,12 +20,12 @@ const space = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Riasis | Verde y Tecnología",
+  title: "Riasis | Verde, Tecnología y Construcción",
   description:
-    "Grupo Riasis en Honduras: landscaping y jardinería, y tienda de smartphones de alta gama.",
+    "Grupo Riasis en Honduras: landscaping y jardinería, tienda de smartphones de alta gama, y construcción.",
   openGraph: {
     title: "Riasis",
-    description: "Dos rubros, un grupo: Verde y Tecnología.",
+    description: "Tres rubros, un grupo: Verde, Tecnología y Construcción.",
     locale: "es_HN",
     type: "website",
   },
@@ -40,6 +40,7 @@ export default function RootLayout({
     <html
       lang="es"
       className={`${display.variable} ${sans.variable} ${space.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
       style={{ colorScheme: "light" }}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">{children}</body>

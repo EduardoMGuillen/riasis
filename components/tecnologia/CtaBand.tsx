@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import {
+  CONTACT_EMAIL,
   INSTAGRAM_HANDLE,
   WHATSAPP_DISPLAY,
 } from "@/lib/constants";
-import { instagramUrl, whatsappInterestUrl } from "@/lib/contact";
+import { instagramUrl, mailtoUrl, whatsappInterestUrl } from "@/lib/contact";
 
 export default function CtaBand() {
   return (
@@ -41,6 +42,12 @@ export default function CtaBand() {
               className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-white/20"
             >
               Instagram {INSTAGRAM_HANDLE}
+            </a>
+            <a
+              href={mailtoUrl()}
+              className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-white/20"
+            >
+              {CONTACT_EMAIL}
             </a>
           </div>
         </motion.div>

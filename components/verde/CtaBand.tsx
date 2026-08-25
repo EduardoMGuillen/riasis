@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
+import { CONTACT_EMAIL } from "@/lib/constants";
+import { mailtoUrl } from "@/lib/contact";
 
 export default function CtaBand() {
   const [sent, setSent] = useState(false);
@@ -57,10 +59,10 @@ export default function CtaBand() {
               <dt className="text-white/50">Correo</dt>
               <dd>
                 <a
-                  href="mailto:hola@riasisverde.hn"
+                  href={mailtoUrl()}
                   className="font-medium text-white transition hover:text-rv-glow"
                 >
-                  hola@riasisverde.hn
+                  {CONTACT_EMAIL}
                 </a>
               </dd>
             </div>

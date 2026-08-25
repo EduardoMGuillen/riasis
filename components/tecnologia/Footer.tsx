@@ -1,11 +1,12 @@
 import Link from "next/link";
 import {
+  CONTACT_EMAIL,
   INSTAGRAM_HANDLE,
   NEXUS_URL,
   STORE_ADDRESS,
   WHATSAPP_DISPLAY,
 } from "@/lib/constants";
-import { instagramUrl, whatsappInterestUrl } from "@/lib/contact";
+import { instagramUrl, mailtoUrl, whatsappInterestUrl } from "@/lib/contact";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -28,6 +29,10 @@ export default function Footer() {
             {" · "}
             <Link href="/verde" className="text-sm text-white/55 transition hover:text-white">
               Riasis Verde
+            </Link>
+            {" · "}
+            <Link href="/Construccion" className="text-sm text-white/55 transition hover:text-white">
+              Riasis Construcción
             </Link>
           </p>
         </div>
@@ -92,6 +97,14 @@ export default function Footer() {
                 className="transition hover:text-brand-blue"
               >
                 Instagram {INSTAGRAM_HANDLE}
+              </a>
+            </li>
+            <li>
+              <a
+                href={mailtoUrl()}
+                className="transition hover:text-brand-blue"
+              >
+                {CONTACT_EMAIL}
               </a>
             </li>
           </ul>
