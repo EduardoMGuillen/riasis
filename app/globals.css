@@ -140,3 +140,48 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+.landing-triptych {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-panel {
+  position: relative;
+  min-height: 100svh;
+  flex: 1 1 auto;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+@media (min-width: 768px) {
+  .landing-triptych {
+    height: 100svh;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .landing-panel {
+    min-height: 0;
+    height: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    transition: flex 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .landing-triptych:hover .landing-panel:not(:hover):not(:focus-within),
+  .landing-triptych:focus-within .landing-panel:not(:hover):not(:focus-within) {
+    flex: 0.7 1 0;
+  }
+
+  .landing-triptych .landing-panel:hover,
+  .landing-triptych .landing-panel:focus-within {
+    flex: 2.5 1 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-panel {
+    transition: none;
+  }
+}

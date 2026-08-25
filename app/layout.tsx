@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Outfit, Space_Grotesk } from "next/font/google";
+import { Bebas_Neue, Fraunces, Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const display = Fraunces({
@@ -16,6 +16,13 @@ const sans = Outfit({
 const space = Space_Grotesk({
   variable: "--font-space",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const bebas = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
   display: "swap",
 });
 
@@ -39,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${display.variable} ${sans.variable} ${space.variable} h-full antialiased`}
+      className={`${display.variable} ${sans.variable} ${space.variable} ${bebas.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
       style={{ colorScheme: "light" }}
     >
