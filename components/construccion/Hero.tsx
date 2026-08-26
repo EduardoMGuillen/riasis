@@ -50,7 +50,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.08 }}
-          className="max-w-2xl font-display text-4xl leading-[0.95] tracking-tight text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl"
+          className="max-w-2xl font-display text-4xl leading-[1.05] tracking-tight text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Levantamos
           <span className="block text-brand-400">proyectos que duran.</span>

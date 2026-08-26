@@ -13,7 +13,7 @@ const points = [
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-rv-white py-24 md:py-32">
+    <section id="sobre" className="scroll-mt-24 bg-rv-white py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
@@ -32,7 +32,7 @@ export default function About() {
             />
           </div>
           <div className="absolute -bottom-5 -right-2 max-w-[14rem] rounded-2xl bg-rv-forest px-5 py-4 text-white shadow-lg md:-right-6 md:max-w-[16rem]">
-            <p className="font-[family-name:var(--font-display)] text-3xl leading-none">
+            <p className="font-display text-3xl leading-none">
               +80
             </p>
             <p className="mt-1 text-sm text-white/75">
@@ -50,7 +50,7 @@ export default function About() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-leaf">
             Sobre nosotros
           </p>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl text-rv-ink text-balance md:text-4xl">
+          <h2 className="font-display text-3xl text-rv-ink text-balance md:text-4xl">
             Trabajamos la tierra con oficio, no con fórmulas.
           </h2>
           <p className="mt-5 text-rv-stone leading-relaxed md:text-lg">

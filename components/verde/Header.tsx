@@ -6,10 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
   { href: "/verde#servicios", label: "Servicios" },
-  { href: "/verde#sobre", label: "Nosotros" },
-  { href: "/verde#proyectos", label: "Proyectos" },
-  { href: "/verde#testimonios", label: "Clientes" },
-  { href: "/verde#contacto", label: "Contacto" },
+  { href: "/verde#gramas", label: "Gramas" },
+  { href: "/verde#jardines", label: "Jardines" },
 ];
 
 export default function Header() {
@@ -52,7 +50,7 @@ export default function Header() {
             className="h-8 w-8 rounded-[9px] shadow-sm"
           />
           <span
-            className={`font-[family-name:var(--font-display)] text-xl tracking-tight transition-colors md:text-2xl ${
+            className={`font-display text-xl tracking-tight transition-colors md:text-2xl ${
               scrolled || open ? "text-rv-forest" : "text-white"
             }`}
           >
@@ -60,7 +58,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:gap-8 md:flex">
           {links.map((link) => (
             <a
               key={link.href}

@@ -6,7 +6,7 @@ import { demoImages } from "@/lib/demo-images";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-[100svh] overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] scroll-mt-24 overflow-hidden">
       <div className="absolute inset-0">
         <motion.div
           initial={{ scale: 1.08 }}
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mb-4 font-[family-name:var(--font-display)] text-3xl text-white drop-shadow-sm md:text-5xl lg:text-6xl"
+          className="mb-4 font-display text-3xl text-white drop-shadow-sm md:text-5xl lg:text-6xl"
         >
           Riasis Verde
         </motion.p>
@@ -54,8 +54,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.42 }}
           className="mt-5 max-w-md text-base text-white/90 md:text-lg"
         >
-          Diseño, instalación y mantenimiento de exteriores con mirada local y
-          ejecución impecable.
+          Diseño, instalación de grama y mantenimiento en Honduras. Oficio
+          local, ejecución limpia.
         </motion.p>
 
         <motion.div
@@ -71,10 +71,10 @@ export default function Hero() {
             Hablar con el equipo
           </a>
           <a
-            href="#proyectos"
+            href="#jardines"
             className="rounded-full border border-white/35 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
           >
-            Ver proyectos
+            Ver jardines
           </a>
         </motion.div>
       </div>
