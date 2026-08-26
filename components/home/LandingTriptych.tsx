@@ -16,7 +16,6 @@ const panels = [
     image:
       "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2400&q=75",
     alt: "Patio tropical con piscina, palmeras y jardín residencial",
-    titleClass: "font-[family-name:var(--font-fraunces)]",
     accent: "bg-rv-moss",
     accentText: "text-rv-glow",
     wash: "bg-rv-forest/20",
@@ -31,7 +30,6 @@ const panels = [
     image:
       "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=2400&q=75",
     alt: "Smartphone de alta gama y audífonos sobre superficie de madera",
-    titleClass: "font-[family-name:var(--font-space)] font-semibold tracking-tight",
     accent: "bg-brand-blue",
     accentText: "text-brand-blue",
     wash: "bg-black/10",
@@ -46,7 +44,6 @@ const panels = [
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=75",
     alt: "Equipo en una obra de construcción con estructura y acero",
-    titleClass: "font-[family-name:var(--font-bebas)] tracking-wide",
     accent: "bg-brand-500",
     accentText: "text-brand-400",
     wash: "bg-brand-950/20",
@@ -129,7 +126,7 @@ export default function LandingTriptych() {
 
             <div className="relative z-10 flex h-full flex-row items-center gap-3 px-5 md:flex-col md:items-stretch md:justify-end md:px-8 md:pb-12 md:pt-24 lg:px-10 lg:pb-14">
               <p
-                className={`shrink-0 text-2xl leading-none opacity-25 md:mb-auto md:pt-1 md:text-7xl lg:text-8xl ${panel.titleClass} ${panel.accentText}`}
+                className={`shrink-0 font-display text-2xl leading-none tracking-tight opacity-25 md:mb-auto md:pt-1 md:text-7xl lg:text-8xl ${panel.accentText}`}
                 aria-hidden
               >
                 {panel.index}
@@ -151,7 +148,7 @@ export default function LandingTriptych() {
                   {panel.kicker}
                 </p>
                 <h2
-                  className={`mt-1 truncate text-3xl leading-[0.95] md:mt-2 md:overflow-visible md:text-4xl md:[font-size:clamp(2rem,12cqw,3.75rem)] ${panel.titleClass}`}
+                  className="mt-1 truncate font-display text-3xl leading-[0.95] tracking-tight md:mt-2 md:overflow-visible md:text-4xl md:[font-size:clamp(2rem,12cqw,3.75rem)]"
                 >
                   {panel.title}
                 </h2>

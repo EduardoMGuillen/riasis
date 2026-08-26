@@ -32,7 +32,7 @@ export default function About() {
             />
           </div>
           <div className="absolute -bottom-5 -right-2 max-w-[14rem] rounded-2xl bg-rv-forest px-5 py-4 text-white shadow-lg md:-right-6 md:max-w-[16rem]">
-            <p className="font-[family-name:var(--font-display)] text-3xl leading-none">
+            <p className="font-display text-3xl leading-none">
               +80
             </p>
             <p className="mt-1 text-sm text-white/75">
@@ -50,7 +50,7 @@ export default function About() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-leaf">
             Sobre nosotros
           </p>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl text-rv-ink text-balance md:text-4xl">
+          <h2 className="font-display text-3xl text-rv-ink text-balance md:text-4xl">
             Trabajamos la tierra con oficio, no con fórmulas.
           </h2>
           <p className="mt-5 text-rv-stone leading-relaxed md:text-lg">
