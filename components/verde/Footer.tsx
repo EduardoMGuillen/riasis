@@ -62,11 +62,6 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/verde#proyectos" className="transition hover:text-rv-forest">
-                Proyectos
-              </a>
-            </li>
-            <li>
               <a href="/verde#contacto" className="transition hover:text-rv-forest">
                 Cotización
               </a>

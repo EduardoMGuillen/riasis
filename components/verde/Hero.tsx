@@ -71,10 +71,10 @@ export default function Hero() {
             Hablar con el equipo
           </a>
           <a
-            href="#proyectos"
+            href="#jardines"
             className="rounded-full border border-white/35 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
           >
-            Ver proyectos
+            Ver jardines
           </a>
         </motion.div>
       </div>

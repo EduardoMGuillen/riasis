@@ -8,7 +8,6 @@ const links = [
   { href: "/verde#servicios", label: "Servicios" },
   { href: "/verde#gramas", label: "Gramas" },
   { href: "/verde#jardines", label: "Jardines" },
-  { href: "/verde#proyectos", label: "Proyectos" },
 ];
 
 export default function Header() {
