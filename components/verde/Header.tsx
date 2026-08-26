@@ -52,7 +52,7 @@ export default function Header() {
             className="h-8 w-8 rounded-[9px] shadow-sm"
           />
           <span
-            className={`font-[family-name:var(--font-display)] text-xl tracking-tight transition-colors md:text-2xl ${
+            className={`font-display text-xl tracking-tight transition-colors md:text-2xl ${
               scrolled || open ? "text-rv-forest" : "text-white"
             }`}
           >

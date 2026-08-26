@@ -35,7 +35,7 @@ export default function CtaBand() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-glow">
             Contacto
           </p>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl text-balance md:text-5xl">
+          <h2 className="font-display text-3xl text-balance md:text-5xl">
             Cuéntanos cómo se ve tu próximo exterior.
           </h2>
           <p className="mt-4 max-w-md text-white/75 md:text-lg">

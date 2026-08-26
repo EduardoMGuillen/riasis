@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mb-4 font-[family-name:var(--font-display)] text-3xl text-white drop-shadow-sm md:text-5xl lg:text-6xl"
+          className="mb-4 font-display text-3xl text-white drop-shadow-sm md:text-5xl lg:text-6xl"
         >
           Riasis Verde
         </motion.p>

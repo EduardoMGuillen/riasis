@@ -40,7 +40,7 @@ export default function Projects() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-leaf">
               Proyectos
             </p>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl text-rv-ink md:text-5xl">
+            <h2 className="font-display text-3xl text-rv-ink md:text-5xl">
               Espacios que ya crecen.
             </h2>
           </div>
