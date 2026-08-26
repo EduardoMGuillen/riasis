@@ -9,31 +9,35 @@ const projects = [
     image: demoImages.project1,
     title: "Residencia Las Lomas",
     place: "Tegucigalpa",
+    work: "Diseño e instalación",
     span: "md:col-span-2 md:row-span-2",
   },
   {
     image: demoImages.project2,
     title: "Patio tropical",
     place: "Valle de Ángeles",
+    work: "Remodelación",
     span: "",
   },
   {
     image: demoImages.project3,
     title: "Jardín ornamental",
     place: "Comayagua",
+    work: "Paisajismo",
     span: "",
   },
   {
     image: demoImages.project4,
     title: "Sendero residencial",
     place: "San Pedro Sula",
+    work: "Mantenimiento de obra",
     span: "md:col-span-2",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="proyectos" className="bg-rv-fog py-24 md:py-32">
+    <section id="proyectos" className="scroll-mt-24 bg-rv-fog py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
@@ -45,8 +49,9 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-sm text-rv-stone md:text-right">
-            Selección visual de trabajos recientes. Las fotos de cliente
-            reemplazarán estas imágenes de referencia.
+            Galería de obra. Cuando el equipo cargue fotos reales —incluyendo
+            antes y después— sustituyen estas de referencia. El área en m² se
+            publica por proyecto, no a ojo.
           </p>
         </div>
 
@@ -69,7 +74,10 @@ export default function Projects() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-rv-ink/70 via-transparent to-transparent opacity-90" />
               <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70">
+                  {project.work}
+                </p>
+                <h3 className="mt-1 text-lg font-semibold text-white">{project.title}</h3>
                 <p className="text-sm text-white/70">{project.place}</p>
               </div>
             </motion.article>

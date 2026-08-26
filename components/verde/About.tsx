@@ -13,7 +13,7 @@ const points = [
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-rv-white py-24 md:py-32">
+    <section id="sobre" className="scroll-mt-24 bg-rv-white py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8">
         <motion.div
           initial={{ opacity: 0, x: -24 }}

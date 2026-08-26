@@ -6,7 +6,7 @@ import { demoImages } from "@/lib/demo-images";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-[100svh] overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] scroll-mt-24 overflow-hidden">
       <div className="absolute inset-0">
         <motion.div
           initial={{ scale: 1.08 }}
@@ -54,8 +54,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.42 }}
           className="mt-5 max-w-md text-base text-white/90 md:text-lg"
         >
-          Diseño, instalación y mantenimiento de exteriores con mirada local y
-          ejecución impecable.
+          Diseño, instalación de grama y mantenimiento en Honduras. Oficio
+          local, ejecución limpia.
         </motion.p>
 
         <motion.div
