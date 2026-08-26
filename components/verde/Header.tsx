@@ -6,10 +6,9 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
   { href: "/verde#servicios", label: "Servicios" },
-  { href: "/verde#sobre", label: "Nosotros" },
+  { href: "/verde#gramas", label: "Gramas" },
+  { href: "/verde#jardines", label: "Jardines" },
   { href: "/verde#proyectos", label: "Proyectos" },
-  { href: "/verde#testimonios", label: "Clientes" },
-  { href: "/verde#contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -60,7 +59,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:gap-8 md:flex">
           {links.map((link) => (
             <a
               key={link.href}

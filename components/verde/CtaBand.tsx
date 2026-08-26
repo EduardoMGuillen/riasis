@@ -3,18 +3,42 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { CONTACT_EMAIL, WHATSAPP_DISPLAY } from "@/lib/constants";
-import { mailtoUrl, whatsappUrl } from "@/lib/contact";
+import { mailtoUrl, whatsappUrl, whatsappVerdeQuoteUrl } from "@/lib/contact";
+import { quoteServices } from "@/lib/verde-content";
 
 export default function CtaBand() {
-  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    const data = new FormData(e.currentTarget);
+    const name = String(data.get("nombre") || "").trim();
+    const phone = String(data.get("telefono") || "").trim();
+    if (!name || !phone) {
+      setError("Nombre y teléfono son necesarios para cotizar.");
+      return;
+    }
+    setError("");
+    window.open(
+      whatsappVerdeQuoteUrl({
+        name,
+        phone,
+        email: String(data.get("email") || "").trim(),
+        location: String(data.get("ubicacion") || "").trim(),
+        service: String(data.get("servicio") || "").trim(),
+        area: String(data.get("area") || "").trim(),
+        details: String(data.get("mensaje") || "").trim(),
+      }),
+      "_blank",
+      "noopener,noreferrer",
+    );
   }
 
   return (
-    <section id="contacto" className="relative overflow-hidden bg-rv-forest py-24 text-white md:py-28">
+    <section
+      id="contacto"
+      className="relative scroll-mt-24 overflow-hidden bg-rv-forest py-24 text-white md:py-28"
+    >
       <div
         className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-rv-moss/30 blur-3xl"
         aria-hidden
@@ -25,7 +49,7 @@ export default function CtaBand() {
       />
       <div className="grain opacity-[0.06] mix-blend-overlay" />
 
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-[1.1fr_0.9fr] md:gap-16 md:px-8">
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-[1.05fr_0.95fr] md:gap-16 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,14 +57,15 @@ export default function CtaBand() {
           transition={{ duration: 0.6 }}
         >
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-rv-glow">
-            Contacto
+            Cotización
           </p>
           <h2 className="font-display text-3xl text-balance md:text-5xl">
-            Cuéntanos cómo se ve tu próximo exterior.
+            Cuéntanos el terreno. Te respondemos por WhatsApp.
           </h2>
           <p className="mt-4 max-w-md text-white/75 md:text-lg">
-            Cotizamos visitas técnicas, rediseños y mantenimiento continuo.
-            Respuesta en horario laboral.
+            Visita técnica, instalación o plan mensual. Las fotos del espacio
+            se mandan en el mismo chat: WhatsApp no deja adjuntarlas desde la
+            web.
           </p>
 
           <dl className="mt-10 space-y-5 text-sm md:text-base">
@@ -87,63 +112,99 @@ export default function CtaBand() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="rounded-3xl bg-white/10 p-6 backdrop-blur-sm md:p-8"
         >
-          {sent ? (
-            <p className="py-10 text-center text-lg text-white">
-              Gracias. Te contactaremos pronto para coordinar la visita.
-            </p>
-          ) : (
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="nombre" className="mb-1.5 block text-sm text-white/70">
-                  Nombre
-                </label>
-                <input
-                  id="nombre"
-                  name="nombre"
-                  required
-                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-rv-glow"
-                  placeholder="Tu nombre"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="mb-1.5 block text-sm text-white/70">
-                  Correo o teléfono
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-rv-glow"
-                  placeholder="Para responderte"
-                />
-              </div>
-              <div>
-                <label htmlFor="mensaje" className="mb-1.5 block text-sm text-white/70">
-                  Proyecto
-                </label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  required
-                  rows={4}
-                  className="w-full resize-none rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-rv-glow"
-                  placeholder="Tipo de espacio, zona y lo que buscas..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-rv-forest transition hover:bg-rv-fog"
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field id="nombre" label="Nombre" placeholder="Tu nombre" required />
+            <Field
+              id="telefono"
+              label="Teléfono"
+              placeholder="+504 …"
+              type="tel"
+              required
+            />
+            <Field
+              id="email"
+              label="Correo"
+              placeholder="opcional"
+              type="email"
+            />
+            <Field
+              id="ubicacion"
+              label="Ubicación"
+              placeholder="Colonia, ciudad"
+            />
+            <div>
+              <label htmlFor="servicio" className="mb-1.5 block text-sm text-white/70">
+                Tipo de servicio
+              </label>
+              <select
+                id="servicio"
+                name="servicio"
+                className="w-full appearance-none rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none [color-scheme:dark] focus:border-rv-glow"
+                defaultValue="Diseño y paisajismo"
               >
-                Enviar consulta
-              </button>
-              <p className="text-center text-xs text-white/45">
-                Formulario de demostración — conectar a backend o servicio de
-                correo cuando esté listo.
-              </p>
+                {quoteServices.map((service) => (
+                  <option key={service} value={service}>
+                    {service}
+                  </option>
+                ))}
+              </select>
             </div>
-          )}
+            <Field id="area" label="Área aproximada" placeholder="m², si los tienes" />
+            <div className="sm:col-span-2">
+              <label htmlFor="mensaje" className="mb-1.5 block text-sm text-white/70">
+                Descripción
+              </label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows={4}
+                className="w-full resize-none rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-rv-glow"
+                placeholder="Sol, sombra, qué hay hoy en el terreno y qué quieres lograr."
+              />
+            </div>
+          </div>
+          {error ? <p className="mt-3 text-sm text-rv-glow">{error}</p> : null}
+          <button
+            type="submit"
+            className="mt-5 w-full rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-rv-forest transition hover:bg-rv-fog"
+          >
+            Abrir cotización en WhatsApp
+          </button>
+          <p className="mt-3 text-center text-xs text-white/45">
+            Se abre WhatsApp con los datos. Ahí puedes adjuntar fotos del terreno.
+          </p>
         </motion.form>
       </div>
     </section>
+  );
+}
+
+function Field({
+  id,
+  label,
+  placeholder,
+  type = "text",
+  required,
+}: {
+  id: string;
+  label: string;
+  placeholder: string;
+  type?: string;
+  required?: boolean;
+}) {
+  return (
+    <div>
+      <label htmlFor={id} className="mb-1.5 block text-sm text-white/70">
+        {label}
+      </label>
+      <input
+        id={id}
+        name={id}
+        type={type}
+        required={required}
+        className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-rv-glow"
+        placeholder={placeholder}
+      />
+    </div>
   );
 }

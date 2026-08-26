@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Riasis Verde | Landscaping y Jardinería en Honduras",
   description:
-    "Diseño de paisajes, jardinería y mantenimiento profesional. Transformamos exteriores en Honduras con criterio estético y cuidado sostenible.",
+    "Diseño de paisajes, instalación de grama y mantenimiento en Honduras. Cotización por WhatsApp.",
 };
 
 export default function VerdeLayout({

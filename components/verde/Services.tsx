@@ -1,33 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const services = [
-  {
-    num: "01",
-    title: "Diseño de paisajes",
-    description:
-      "Planos conceptuales y selección vegetal adaptada al clima hondureño, la topografía y el uso real del espacio.",
-  },
-  {
-    num: "02",
-    title: "Jardinería residencial",
-    description:
-      "Jardines frontales, patios y terrazas con composición, color y textura pensados para vivirlos todo el año.",
-  },
-  {
-    num: "03",
-    title: "Mantenimiento",
-    description:
-      "Programas de poda, fertilización y salud del césped para que el resultado se sostenga con el tiempo.",
-  },
-  {
-    num: "04",
-    title: "Riego e instalación",
-    description:
-      "Sistemas eficientes, trasplante, hardscape ligero y ejecución limpia de principio a fin.",
-  },
-];
+import { extraServices, services } from "@/lib/verde-content";
 
 const container = {
   hidden: { opacity: 0 },
@@ -44,7 +18,10 @@ const item = {
 
 export default function Services() {
   return (
-    <section id="servicios" className="leaf-wash relative overflow-hidden py-24 md:py-32">
+    <section
+      id="servicios"
+      className="leaf-wash relative scroll-mt-24 overflow-hidden py-24 md:py-32"
+    >
       <div className="grain" />
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
         <div className="mb-14 max-w-2xl md:mb-20">
@@ -81,6 +58,17 @@ export default function Services() {
             </motion.li>
           ))}
         </motion.ul>
+
+        <p className="mt-10 max-w-3xl text-sm leading-relaxed text-rv-stone md:text-base">
+          También hacemos{" "}
+          {extraServices.map((name, i) => (
+            <span key={name}>
+              {i > 0 ? (i === extraServices.length - 1 ? " y " : ", ") : null}
+              <span className="text-rv-charcoal">{name.toLowerCase()}</span>
+            </span>
+          ))}
+          . Si no está en la lista, se evalúa en visita.
+        </p>
       </div>
     </section>
   );

@@ -47,8 +47,18 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/verde#sobre" className="transition hover:text-rv-forest">
-                Nosotros
+              <a href="/verde#gramas" className="transition hover:text-rv-forest">
+                Gramas
+              </a>
+            </li>
+            <li>
+              <a href="/verde#jardines" className="transition hover:text-rv-forest">
+                Jardines
+              </a>
+            </li>
+            <li>
+              <a href="/verde#instalacion" className="transition hover:text-rv-forest">
+                Instalación
               </a>
             </li>
             <li>
@@ -57,13 +67,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/verde#testimonios" className="transition hover:text-rv-forest">
-                Clientes
-              </a>
-            </li>
-            <li>
               <a href="/verde#contacto" className="transition hover:text-rv-forest">
-                Contacto
+                Cotización
               </a>
             </li>
           </ul>

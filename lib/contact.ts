@@ -46,3 +46,26 @@ export function instagramUrl() {
 export function mailtoUrl() {
   return `mailto:${CONTACT_EMAIL}`;
 }
+
+export type VerdeQuote = {
+  name?: string;
+  phone?: string;
+  email?: string;
+  location?: string;
+  service?: string;
+  area?: string;
+  details?: string;
+};
+
+/** Cotización de Verde: el mensaje sale por WhatsApp, que es el canal que sí atienden. */
+export function whatsappVerdeQuoteUrl(quote: VerdeQuote) {
+  const lines = ["Hola, quiero cotizar con Riasis Verde."];
+  if (quote.name) lines.push(`Nombre: ${quote.name}`);
+  if (quote.phone) lines.push(`Teléfono: ${quote.phone}`);
+  if (quote.email) lines.push(`Correo: ${quote.email}`);
+  if (quote.location) lines.push(`Ubicación: ${quote.location}`);
+  if (quote.service) lines.push(`Servicio: ${quote.service}`);
+  if (quote.area) lines.push(`Área: ${quote.area}`);
+  if (quote.details) lines.push(`Detalle: ${quote.details}`);
+  return whatsappUrl(lines.join("\n"));
+}
