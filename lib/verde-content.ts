@@ -82,8 +82,8 @@ export const grasses = [
     slug: "zoysia",
     name: "Zoysia",
     image: {
-      src: img("photo-1466692476866-aef241adf2a4"),
-      alt: "Alfombra densa de césped tipo Zoysia",
+      src: img("photo-1458245201577-fc8a130b8829"),
+      alt: "Césped denso tipo Zoysia visto desde arriba",
     },
     summary:
       "Alfombra densa y de crecimiento más lento. Queda ordenada, pero pide paciencia al establecerse.",
@@ -108,8 +108,8 @@ export const grasses = [
     slug: "artificial",
     name: "Grama artificial",
     image: {
-      src: img("photo-1523348837708-15d4a09cfac2", 1400),
-      alt: "Superficie de grama artificial instalada",
+      src: img("photo-1551958219-acbc608c6377", 1400),
+      alt: "Grama artificial en una cancha",
     },
     summary:
       "Cuando el césped natural no prende —sombra dura, terraza, alto desgaste— instalamos césped sintético como obra, no como tapete suelto.",
@@ -132,16 +132,16 @@ export const gardenTypes = [
     slug: "corporativo",
     name: "Corporativo",
     image: {
-      src: img("photo-1497366216548-37526070297c", 1400),
-      alt: "Área verde en un entorno corporativo",
+      src: img("photo-1600566753190-17f0baa2a6c3", 1400),
+      alt: "Exteriores de un edificio con paisajismo",
     },
   },
   {
     slug: "comercial",
     name: "Comercial",
     image: {
-      src: img("photo-1441986300917-64674bd600d8", 1400),
-      alt: "Exteriores de un local comercial",
+      src: img("photo-1528698827591-e19ccd7bc23d", 1400),
+      alt: "Fachada comercial con acera y acceso",
     },
   },
   {
@@ -156,8 +156,8 @@ export const gardenTypes = [
     slug: "compacto",
     name: "Compacto",
     image: {
-      src: img("photo-1416879595882-3373a0480b5b", 1400),
-      alt: "Jardín pequeño trabajado a mano",
+      src: img("photo-1585320806297-9794b3e4eeae", 1400),
+      alt: "Jardín compacto con sendero y setos",
     },
   },
   {
