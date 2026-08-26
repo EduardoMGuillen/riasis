@@ -37,6 +37,9 @@ const SEED_MERGE_BUNDLES: Array<{ id: string; slugs: string[] }> = [
   },
 ];
 
+/** One-shot: apunta SKUs semilla a recortes PNG locales, sin pisar fotos subidas al blob. */
+const CATALOG_PNG_REWRITE_ID = "catalog-png-cutouts-2026-08";
+
 type RawProduct = Partial<Product> & {
   brand: string;
   name: string;
@@ -110,18 +113,44 @@ async function applySeedMergeBundles(products: Product[]): Promise<Product[]> {
   return next;
 }
 
+async function applyCatalogPngRewrite(products: Product[]): Promise<Product[]> {
+  if (!isBlobConfigured()) return products;
+  if (await hasSeedMergeMarker(CATALOG_PNG_REWRITE_ID)) return products;
+
+  const bySlug = new Map(seedList().map((p) => [p.slug, p]));
+  let changed = false;
+  const next = products.map((product) => {
+    const seed = bySlug.get(product.slug);
+    if (
+      seed?.image.startsWith("/products/") &&
+      product.image.startsWith("http") &&
+      !product.image.includes("blob.vercel-storage")
+    ) {
+      changed = true;
+      return { ...product, image: seed.image };
+    }
+    return product;
+  });
+
+  if (changed) await writeBlobCatalog(next);
+  await writeSeedMergeMarker(CATALOG_PNG_REWRITE_ID);
+  return next;
+}
+
 async function loadProducts(): Promise<Product[]> {
   if (isBlobConfigured()) {
     const fromBlob = await readBlobCatalog();
     if (fromBlob !== null) {
-      return applySeedMergeBundles(normalizeList(fromBlob));
+      const merged = await applySeedMergeBundles(normalizeList(fromBlob));
+      return applyCatalogPngRewrite(merged);
     }
 
     const fromLocal = await readLocalCatalog();
     const seeded = normalizeList(fromLocal);
     const initial = seeded.length > 0 ? seeded : seedList();
     await writeBlobCatalog(initial);
-    return applySeedMergeBundles(initial);
+    const merged = await applySeedMergeBundles(initial);
+    return applyCatalogPngRewrite(merged);
   }
 
   const fromLocal = await readLocalCatalog();
