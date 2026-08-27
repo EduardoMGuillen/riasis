@@ -55,10 +55,10 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="flex flex-col justify-center">
             <Link
-              href="/tecnologia#catalogo"
+              href="/tecnologia"
               className="mb-6 text-sm font-medium text-muted transition hover:text-foreground"
             >
-              ← Volver al catálogo
+              ← Volver a Riasis Tecnología
             </Link>
             <p className="text-sm font-semibold tracking-wide text-brand-blue uppercase">
               {product.category} · {product.brand} · {product.series}

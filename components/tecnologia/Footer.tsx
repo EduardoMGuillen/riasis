@@ -2,12 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   CONTACT_EMAIL,
-  INSTAGRAM_HANDLE,
   NEXUS_URL,
   STORE_ADDRESS,
   WHATSAPP_DISPLAY,
 } from "@/lib/constants";
-import { instagramUrl, mailtoUrl, whatsappInterestUrl } from "@/lib/contact";
+import { mailtoUrl, whatsappQuoteUrl } from "@/lib/contact";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -29,8 +28,8 @@ export default function Footer() {
             </p>
           </div>
           <p className="mt-4 max-w-sm text-sm text-white/65">
-            Smartphones de alta gama, redes y seguridad electrónica en Honduras.
-            Vitrina online, instalación en campo.
+            Infraestructura IT, redes y seguridad electrónica en Honduras.
+            Instalación en campo, cotización por WhatsApp.
           </p>
           <p className="mt-4">
             <Link href="/" className="text-sm text-white/55 transition hover:text-white">
@@ -51,16 +50,6 @@ export default function Footer() {
           <p className="text-sm font-semibold text-white">Explorar</p>
           <ul className="mt-3 space-y-2 text-sm text-white/65">
             <li>
-              <a href="/tecnologia#destacados" className="transition hover:text-white">
-                Destacados
-              </a>
-            </li>
-            <li>
-              <a href="/tecnologia#catalogo" className="transition hover:text-white">
-                Catálogo
-              </a>
-            </li>
-            <li>
               <a href="/tecnologia#servicios" className="transition hover:text-white">
                 Servicios
               </a>
@@ -68,6 +57,11 @@ export default function Footer() {
             <li>
               <a href="/tecnologia#proceso" className="transition hover:text-white">
                 Proceso
+              </a>
+            </li>
+            <li>
+              <a href="/tecnologia#proyectos" className="transition hover:text-white">
+                Proyectos
               </a>
             </li>
             <li>
@@ -101,22 +95,12 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href={whatsappInterestUrl()}
+                href={whatsappQuoteUrl("Riasis Tecnología")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-brand-blue"
               >
                 WhatsApp {WHATSAPP_DISPLAY}
-              </a>
-            </li>
-            <li>
-              <a
-                href={instagramUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-brand-blue"
-              >
-                Instagram {INSTAGRAM_HANDLE}
               </a>
             </li>
             <li>

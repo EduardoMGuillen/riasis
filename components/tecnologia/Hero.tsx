@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { whatsappInterestUrl } from "@/lib/contact";
+import { whatsappQuoteUrl } from "@/lib/contact";
 
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=2400&q=80";
+  "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2400&q=80";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src={HERO_IMAGE}
-          alt="Smartphones de alta gama — Riasis Tecnología"
+          alt="Infraestructura de red y racks — imagen de referencia"
           fill
           priority
           quality={95}
@@ -34,33 +34,34 @@ export default function Hero() {
             Riasis <span className="text-brand-blue">Tecnología</span>
           </p>
           <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl lg:text-7xl">
-            El próximo smartphone.
-            <span className="block text-brand-blue">Hoy en Riasis.</span>
+            Cámaras, redes y racks.
+            <span className="block text-brand-blue">Instalados para operar.</span>
           </h1>
           <p className="mt-5 max-w-lg text-base text-white/75 md:text-lg">
-            Teléfonos, tablets y accesorios en vitrina. Redes, cámaras y racks
-            en campo. Compra y cotización por WhatsApp.
+            Infraestructura IT, cableado estructurado y seguridad electrónica.
+            Se diseña en sitio, se cotiza con alcance claro y se entrega
+            documentado.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#catalogo"
+              href="#servicios"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
             >
-              Explorar catálogo
+              Ver servicios
             </a>
             <a
-              href={whatsappInterestUrl()}
+              href="#contacto"
+              className="rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+            >
+              Cotizar
+            </a>
+            <a
+              href={whatsappQuoteUrl("Riasis Tecnología")}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
             >
               WhatsApp
-            </a>
-            <a
-              href="#servicios"
-              className="rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
-            >
-              Infraestructura IT
             </a>
           </div>
         </motion.div>

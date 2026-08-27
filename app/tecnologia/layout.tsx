@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Riasis Tecnología | Dispositivos e infraestructura IT",
+  title: "Riasis Tecnología | Infraestructura IT, redes y seguridad electrónica",
   description:
-    "Smartphones de alta gama, redes, cámaras y cableado estructurado en Honduras. Catálogo online e instalación en campo.",
+    "Cableado estructurado, cámaras IP, racks, redes empresariales y control de acceso en Honduras. Cotización y visita técnica.",
 };
 
 export default function TecnologiaLayout({

@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const points = [
-  "Modelos verificados con garantía real",
-  "Asesoría honesta por WhatsApp o Instagram",
-  "Coordinación clara de entrega y pago",
-  "Soporte post-venta cuando lo necesitas",
+  "Levantamiento en sitio antes de cotizar",
+  "Alcance desglosado: materiales, mano de obra y equipo",
+  "Etiquetado, pruebas y entrega documentada",
+  "Mantenimiento preventivo cuando el cliente lo pide",
 ];
 
 export default function About() {
@@ -23,17 +23,17 @@ export default function About() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem]">
             <Image
-              src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&q=80"
-              alt="Smartphones en vitrina"
+              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a2?auto=format&fit=crop&w=1200&q=80"
+              alt="Cableado de red en rack — imagen de referencia"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
           <div className="absolute -bottom-5 -right-2 max-w-[14rem] rounded-2xl bg-brand-blue px-5 py-4 text-white shadow-lg md:-right-6 md:max-w-[16rem]">
-            <p className="font-display text-3xl leading-none font-semibold">+500</p>
+            <p className="font-display text-3xl leading-none font-semibold">En sitio</p>
             <p className="mt-1 text-sm text-white/80">
-              equipos entregados a clientes en Honduras
+              Medimos, fotografiamos y cotizamos con el predio delante.
             </p>
           </div>
         </motion.div>
@@ -48,13 +48,13 @@ export default function About() {
             Nosotros
           </p>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-            Tecnología con cara amigable.
+            Precisión técnica, trato directo.
           </h2>
           <p className="mt-5 text-white/70 md:text-lg">
-            Riasis Tecnología es la tienda de smartphones de alta gama del grupo
-            y el equipo que instala redes, cámaras y control de acceso. Eliges
-            el equipo en la vitrina; la infraestructura se cotiza y se ejecuta
-            en sitio. WhatsApp e Instagram, sin fricción.
+            Riasis Tecnología es la división de infraestructura IT de RISERVINT:
+            redes, cámaras, control de acceso y organización de racks. Un
+            responsable por proyecto. WhatsApp para cotizar, visita para
+            confirmar.
           </p>
 
           <ul className="mt-8 space-y-3">

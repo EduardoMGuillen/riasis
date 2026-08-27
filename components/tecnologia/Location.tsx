@@ -28,11 +28,11 @@ export default function Location() {
             Ubicación
           </p>
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-5xl">
-            Visítanos en {STORE_NAME}.
+            Oficina en {STORE_NAME}.
           </h2>
           <p className="mt-4 text-muted md:text-lg">
-            Estamos en San Pedro Sula. Usa el mapa para explorar la zona o pedir
-            indicaciones.
+            San Pedro Sula. Coordinamos visita técnica o nos vemos aquí para
+            revisar alcance y planos.
           </p>
         </motion.div>
 

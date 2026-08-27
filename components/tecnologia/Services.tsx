@@ -4,26 +4,47 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { whatsappQuoteUrl } from "@/lib/contact";
 
-const pillars = [
+const services = [
   {
     num: "01",
-    title: "Seguridad electrónica",
-    body: "Cámaras IP y PoE, NVR, monitoreo remoto, control de acceso, biometría y videoporteros. El diseño sale del predio, no de un paquete cerrado.",
-    tags: ["CCTV IP", "PoE", "NVR", "Monitoreo remoto", "Biometría", "Videoporteros"],
-    topic: "seguridad electrónica (cámaras y control de acceso)",
+    title: "Cámaras de seguridad",
+    body: "CCTV IP, PoE, NVR y monitoreo remoto. Recorrido de cobertura según el predio, no un paquete cerrado de cámaras.",
+    tags: ["CCTV IP", "PoE", "NVR", "Monitoreo remoto"],
+    topic: "cámaras de seguridad (CCTV, IP, PoE, NVR)",
   },
   {
     num: "02",
-    title: "Cableado, racks y servidores",
-    body: "Cableado estructurado Cat5e / Cat6 / Cat6A, puntos de red para PCs, teléfonos IP, APs, cámaras e IoT, y organización de racks lista para servicio.",
-    tags: ["Cat5e / 6 / 6A", "Puntos de red", "Racks", "Servidores"],
-    topic: "cableado estructurado y organización de racks",
+    title: "Control de acceso",
+    body: "Biometría, videoporteros y cerraduras electrónicas. Un solo criterio de acceso para personal, visitas y horarios.",
+    tags: ["Biometría", "Videoporteros", "Cerraduras"],
+    topic: "control de acceso y seguridad electrónica",
   },
   {
     num: "03",
+    title: "Cableado estructurado",
+    body: "Cat5e, Cat6 y Cat6A con plano de canalizaciones, etiquetado y certificación de enlaces cuando el alcance lo pide.",
+    tags: ["Cat5e", "Cat6", "Cat6A", "Planificación"],
+    topic: "cableado estructurado",
+  },
+  {
+    num: "04",
+    title: "Puntos de red",
+    body: "Tomas para PCs, teléfonos IP, access points, cámaras e IoT. Cada punto queda identificable para el mantenimiento.",
+    tags: ["PCs", "IP phones", "APs", "Cámaras", "IoT"],
+    topic: "puntos de red",
+  },
+  {
+    num: "05",
+    title: "Racks y servidores",
+    body: "Montaje, organización y centros de datos de escala operativa. El rack se entrega para servir, no para lucir.",
+    tags: ["Racks", "Servidores", "Organización"],
+    topic: "racks, servidores y centro de datos",
+  },
+  {
+    num: "06",
     title: "Redes y mantenimiento",
-    body: "Switching, ruteo, VLAN y Wi-Fi empresarial. Mantenimiento preventivo y correctivo para que la red no dependa de visitas de emergencia.",
-    tags: ["VLAN", "Wi-Fi empresarial", "Switches", "Planes mensuales"],
+    body: "Switching, ruteo, VLAN y Wi-Fi empresarial. Planes preventivos y correctivos. Las marcas se confirman en cotización.",
+    tags: ["VLAN", "Wi-Fi", "Switches", "Planes mensuales"],
     topic: "redes empresariales y mantenimiento IT",
   },
 ];
@@ -43,35 +64,35 @@ export default function Services() {
             Servicios
           </p>
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-5xl">
-            Infraestructura que se instala y se sostiene.
+            Infraestructura IT, de punta a punta.
           </h2>
           <p className="mt-4 text-muted md:text-lg">
-            Además del catálogo, ejecutamos redes y seguridad electrónica en
-            sitio. El equipo se define en la cotización — no rellenamos marcas.
+            Redes, seguridad electrónica y racks en sitio. El equipo se define
+            en la cotización — no rellenamos marcas en la web.
           </p>
         </motion.div>
 
-        <div className="grid gap-10 lg:grid-cols-3">
-          {pillars.map((pillar, i) => (
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, i) => (
             <motion.article
-              key={pillar.title}
+              key={service.title}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
+              transition={{ duration: 0.45, delay: i * 0.05 }}
               className="flex flex-col border-t border-black/10 pt-6"
             >
               <p className="font-display text-sm font-semibold text-brand-blue">
-                {pillar.num}
+                {service.num}
               </p>
               <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">
-                {pillar.title}
+                {service.title}
               </h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                {pillar.body}
+                {service.body}
               </p>
               <ul className="mt-5 flex flex-wrap gap-2">
-                {pillar.tags.map((tag) => (
+                {service.tags.map((tag) => (
                   <li
                     key={tag}
                     className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-foreground/70"
@@ -81,7 +102,7 @@ export default function Services() {
                 ))}
               </ul>
               <a
-                href={whatsappQuoteUrl("Riasis Tecnología", pillar.topic)}
+                href={whatsappQuoteUrl("Riasis Tecnología", service.topic)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 text-sm font-semibold text-brand-blue transition hover:text-brand-blue-dark"
@@ -125,7 +146,7 @@ export default function Services() {
           </figure>
         </motion.div>
         <p className="mt-4 text-xs text-muted">
-          Referencia visual de organización de racks. Sustituir por fotos reales
+          Organización de racks: referencia visual. Sustituir por fotos reales
           de instalaciones Riasis.
         </p>
       </div>
