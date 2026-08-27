@@ -35,12 +35,11 @@ export default function CtaBand() {
             Contacto
           </p>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-            ¿Listo para tu próximo teléfono?
+            ¿Listo para el siguiente paso?
           </h2>
           <p className="mt-4 max-w-md text-white/85 md:text-lg">
-            Escríbenos y te respondemos con disponibilidad, colores y formas
-            de pago. Sin carrito online — atención directa de Riasis
-            Tecnología.
+            Teléfono, tablet o una instalación de red. Te respondemos con
+            disponibilidad y alcance. Sin carrito — atención directa.
           </p>
 
           <dl className="mt-10 space-y-5 text-sm md:text-base">

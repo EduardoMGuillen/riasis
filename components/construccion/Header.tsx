@@ -7,8 +7,9 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const nav = [
   { href: "/Construccion#servicios", label: "Servicios" },
-  { href: "/Construccion#sobre", label: "Sobre nosotros" },
-  { href: "/Construccion#testimonios", label: "Testimonios" },
+  { href: "/Construccion#proceso", label: "Proceso" },
+  { href: "/Construccion#proyectos", label: "Proyectos" },
+  { href: "/Construccion#sobre", label: "Nosotros" },
   { href: "/Construccion#contacto", label: "Contacto" },
 ];
 
@@ -72,7 +73,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {nav.map((item) => (
             <a
               key={item.href}
@@ -101,7 +102,7 @@ export default function Header() {
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className={`relative z-50 flex h-10 w-10 items-center justify-center md:hidden ${
+          className={`relative z-50 flex h-10 w-10 items-center justify-center lg:hidden ${
             scrolled || open ? "text-slate-800" : "text-white"
           }`}
         >
@@ -133,7 +134,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="absolute inset-x-0 top-full border-t border-slate-200 bg-white px-5 py-6 md:hidden"
+            className="absolute inset-x-0 top-full border-t border-slate-200 bg-white px-5 py-6 lg:hidden"
           >
             <ul className="flex flex-col gap-1">
               {nav.map((item) => (

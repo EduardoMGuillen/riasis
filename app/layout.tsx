@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Riasis | Verde, Tecnología y Construcción",
   description:
-    "Grupo Riasis en Honduras: landscaping y jardinería, tienda de smartphones de alta gama, y construcción.",
+    "Grupo Riasis en Honduras: landscaping, dispositivos e infraestructura IT, y construcción.",
   openGraph: {
     title: "Riasis",
     description: "Tres rubros, un grupo: Verde, Tecnología y Construcción.",

@@ -2,7 +2,9 @@ import Header from "@/components/tecnologia/Header";
 import Hero from "@/components/tecnologia/Hero";
 import Featured from "@/components/tecnologia/Featured";
 import Catalog from "@/components/tecnologia/Catalog";
+import Services from "@/components/tecnologia/Services";
 import WhyMarphone from "@/components/tecnologia/WhyMarphone";
+import Process from "@/components/tecnologia/Process";
 import About from "@/components/tecnologia/About";
 import Testimonials from "@/components/tecnologia/Testimonials";
 import Location from "@/components/tecnologia/Location";
@@ -25,7 +27,9 @@ export default async function TecnologiaPage() {
         <Hero />
         <Featured products={featured} />
         <Catalog products={products} />
+        <Services />
         <WhyMarphone />
+        <Process />
         <About />
         <Testimonials />
         <Location />

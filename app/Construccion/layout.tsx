@@ -15,9 +15,9 @@ const sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Riasis Construcción | Obra nueva, reformas y dirección de obra",
+  title: "Riasis Construcción | Obra nueva, remodelación y obra civil",
   description:
-    "Empresa de construcción y reformas en Honduras. Calidad certificada, plazos cumplidos y equipo propio.",
+    "Construcción y remodelación en Honduras. Viviendas, obra comercial, acabados y dirección de obra con presupuesto desglosado.",
 };
 
 export default function ConstruccionLayout({

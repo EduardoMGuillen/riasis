@@ -3,13 +3,45 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { CONTACT_EMAIL, WHATSAPP_DISPLAY } from "@/lib/constants";
-import { mailtoUrl, whatsappUrl } from "@/lib/contact";
+import { mailtoUrl, whatsappQuoteUrl, whatsappUrl } from "@/lib/contact";
+
+const workTypes = [
+  "Vivienda nueva o ampliación",
+  "Remodelación",
+  "Obra comercial",
+  "Obra civil",
+  "Estructura o cubiertas",
+  "Acabados",
+  "Mantenimiento",
+  "Otro",
+];
 
 export default function CtaBand() {
   const [sent, setSent] = useState(false);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const nombre = String(data.get("nombre") || "").trim();
+    const contacto = String(data.get("contacto") || "").trim();
+    const tipo = String(data.get("tipo") || "").trim();
+    const ubicacion = String(data.get("ubicacion") || "").trim();
+    const presupuesto = String(data.get("presupuesto") || "").trim();
+    const inicio = String(data.get("inicio") || "").trim();
+    const mensaje = String(data.get("mensaje") || "").trim();
+
+    const lines = [
+      `Hola, quiero cotizar un proyecto de Riasis Construcción.`,
+      `Nombre: ${nombre}`,
+      `Contacto: ${contacto}`,
+      tipo ? `Tipo de obra: ${tipo}` : "",
+      ubicacion ? `Ubicación: ${ubicacion}` : "",
+      presupuesto ? `Presupuesto estimado: ${presupuesto}` : "",
+      inicio ? `Inicio aproximado: ${inicio}` : "",
+      mensaje ? `Detalle: ${mensaje}` : "",
+    ].filter(Boolean);
+
+    window.open(whatsappUrl(lines.join("\n")), "_blank", "noopener,noreferrer");
     setSent(true);
   }
 
@@ -42,8 +74,8 @@ export default function CtaBand() {
             Cuéntanos tu proyecto de construcción.
           </h2>
           <p className="mt-4 max-w-md text-white/75 md:text-lg">
-            Te respondemos en 24–48 h laborables con una primera valoración y,
-            si encaja, visita técnica sin compromiso.
+            Completa el formulario y te abrimos WhatsApp con el detalle. Si
+            encaja, coordinamos visita técnica.
           </p>
 
           <dl className="mt-10 space-y-5 text-sm md:text-base">
@@ -51,9 +83,7 @@ export default function CtaBand() {
               <dt className="text-white/50">Teléfono / WhatsApp</dt>
               <dd>
                 <a
-                  href={whatsappUrl(
-                    "Hola, quisiera pedir un presupuesto con Riasis Construcción",
-                  )}
+                  href={whatsappQuoteUrl("Riasis Construcción")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-white transition hover:text-brand-400"
@@ -76,7 +106,7 @@ export default function CtaBand() {
             <div>
               <dt className="text-white/50">Cobertura</dt>
               <dd className="font-medium text-white">
-                Francisco Morazán y alrededores · consultas a nivel nacional
+                Honduras · consultas a nivel nacional
               </dd>
             </div>
           </dl>
@@ -92,10 +122,10 @@ export default function CtaBand() {
         >
           {sent ? (
             <p className="py-10 text-center text-lg text-white">
-              Gracias. Te contactaremos pronto para coordinar la visita.
+              Gracias. Si WhatsApp no se abrió, escríbenos al {WHATSAPP_DISPLAY}.
             </p>
           ) : (
-            <div className="space-y-4">
+            <div className="grid gap-3 sm:grid-cols-2">
               <div>
                 <label htmlFor="nombre" className="mb-1.5 block text-sm text-white/70">
                   Nombre
@@ -109,40 +139,91 @@ export default function CtaBand() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="mb-1.5 block text-sm text-white/70">
-                  Correo o teléfono
+                <label htmlFor="contacto" className="mb-1.5 block text-sm text-white/70">
+                  Teléfono o correo
                 </label>
                 <input
-                  id="email"
-                  name="email"
+                  id="contacto"
+                  name="contacto"
                   required
                   className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-brand-400"
                   placeholder="Para responderte"
                 />
               </div>
               <div>
+                <label htmlFor="tipo" className="mb-1.5 block text-sm text-white/70">
+                  Tipo de obra
+                </label>
+                <select
+                  id="tipo"
+                  name="tipo"
+                  required
+                  defaultValue=""
+                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-brand-400"
+                >
+                  <option value="" disabled className="text-slate-800">
+                    Selecciona
+                  </option>
+                  {workTypes.map((type) => (
+                    <option key={type} value={type} className="text-slate-800">
+                      {type}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="ubicacion" className="mb-1.5 block text-sm text-white/70">
+                  Ubicación
+                </label>
+                <input
+                  id="ubicacion"
+                  name="ubicacion"
+                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-brand-400"
+                  placeholder="Ciudad o barrio"
+                />
+              </div>
+              <div>
+                <label htmlFor="presupuesto" className="mb-1.5 block text-sm text-white/70">
+                  Presupuesto estimado
+                </label>
+                <input
+                  id="presupuesto"
+                  name="presupuesto"
+                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-brand-400"
+                  placeholder="Opcional"
+                />
+              </div>
+              <div>
+                <label htmlFor="inicio" className="mb-1.5 block text-sm text-white/70">
+                  Inicio aproximado
+                </label>
+                <input
+                  id="inicio"
+                  name="inicio"
+                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-brand-400"
+                  placeholder="Mes o trimestre"
+                />
+              </div>
+              <div className="sm:col-span-2">
                 <label htmlFor="mensaje" className="mb-1.5 block text-sm text-white/70">
-                  Proyecto
+                  Detalle
                 </label>
                 <textarea
                   id="mensaje"
                   name="mensaje"
-                  required
-                  rows={4}
+                  rows={3}
                   className="w-full resize-none rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-brand-400"
-                  placeholder="Tipo de obra, zona y lo que buscas..."
+                  placeholder="Área, estado actual y lo que necesitas"
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-700 transition hover:bg-slate-100"
-              >
-                Enviar consulta
-              </button>
-              <p className="text-center text-xs text-white/45">
-                Formulario de demostración — conectar a backend o servicio de
-                correo cuando esté listo.
-              </p>
+              <div className="sm:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-700 transition hover:bg-slate-100"
+                >
+                  Enviar por WhatsApp
+                </button>
+              </div>
             </div>
           )}
         </motion.form>

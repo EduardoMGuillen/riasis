@@ -29,8 +29,8 @@ export default function Footer() {
             </p>
           </div>
           <p className="mt-4 max-w-sm text-sm text-white/65">
-            Smartphones de alta gama en Honduras. Vitrina online, compra por
-            WhatsApp e Instagram.
+            Smartphones de alta gama, redes y seguridad electrónica en Honduras.
+            Vitrina online, instalación en campo.
           </p>
           <p className="mt-4">
             <Link href="/" className="text-sm text-white/55 transition hover:text-white">
@@ -58,6 +58,16 @@ export default function Footer() {
             <li>
               <a href="/tecnologia#catalogo" className="transition hover:text-white">
                 Catálogo
+              </a>
+            </li>
+            <li>
+              <a href="/tecnologia#servicios" className="transition hover:text-white">
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a href="/tecnologia#proceso" className="transition hover:text-white">
+                Proceso
               </a>
             </li>
             <li>

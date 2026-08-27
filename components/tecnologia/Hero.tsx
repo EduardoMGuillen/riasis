@@ -38,8 +38,8 @@ export default function Hero() {
             <span className="block text-brand-blue">Hoy en Riasis.</span>
           </h1>
           <p className="mt-5 max-w-lg text-base text-white/75 md:text-lg">
-            Teléfonos, tablets, audífonos y accesorios. Compra fácil por
-            WhatsApp o Instagram.
+            Teléfonos, tablets y accesorios en vitrina. Redes, cámaras y racks
+            en campo. Compra y cotización por WhatsApp.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -55,6 +55,12 @@ export default function Hero() {
               className="rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
             >
               WhatsApp
+            </a>
+            <a
+              href="#servicios"
+              className="rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+            >
+              Infraestructura IT
             </a>
           </div>
         </motion.div>

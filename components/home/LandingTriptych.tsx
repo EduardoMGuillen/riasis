@@ -26,7 +26,7 @@ const panels = [
     index: "02",
     kicker: "Tecnología",
     title: "Tecnología",
-    line: "Smartphones de alta gama. Vitrina online, compra por WhatsApp.",
+    line: "Smartphones, redes y seguridad electrónica. Vitrina online, instalación en campo.",
     cta: "Entrar",
     image:
       "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=2400&q=75",
@@ -41,7 +41,7 @@ const panels = [
     index: "03",
     kicker: "Obra",
     title: "Construcción",
-    line: "Obra nueva, reformas y dirección de obra. Plazos que se cumplen.",
+    line: "Obra nueva, remodelación y obra civil. Un responsable por proyecto.",
     cta: "Entrar",
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=75",

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_EMAIL, NEXUS_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
-import { mailtoUrl, whatsappUrl } from "@/lib/contact";
+import { mailtoUrl, whatsappQuoteUrl } from "@/lib/contact";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -18,9 +18,8 @@ export default function Footer() {
               className="h-10 w-auto"
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
-              Construcción, reformas y mantenimiento con equipo propio y
-              compromiso de plazos. Sustituye este texto por la historia real
-              de tu empresa.
+              Construcción, remodelación y obra civil con equipo propio. Un
+              responsable por proyecto y presupuesto desglosado.
             </p>
             <p className="mt-4 text-sm text-slate-600">
               <Link href="/" className="transition hover:text-brand-600">
@@ -48,13 +47,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/Construccion#sobre" className="transition hover:text-brand-600">
-                  Sobre nosotros
+                <a href="/Construccion#proceso" className="transition hover:text-brand-600">
+                  Proceso
                 </a>
               </li>
               <li>
-                <a href="/Construccion#testimonios" className="transition hover:text-brand-600">
-                  Testimonios
+                <a href="/Construccion#proyectos" className="transition hover:text-brand-600">
+                  Proyectos
+                </a>
+              </li>
+              <li>
+                <a href="/Construccion#sobre" className="transition hover:text-brand-600">
+                  Nosotros
                 </a>
               </li>
               <li>
@@ -72,9 +76,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
               <li>
                 <a
-                  href={whatsappUrl(
-                    "Hola, quisiera pedir un presupuesto con Riasis Construcción",
-                  )}
+                  href={whatsappQuoteUrl("Riasis Construcción")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition hover:text-brand-600"
@@ -87,9 +89,7 @@ export default function Footer() {
                   {CONTACT_EMAIL}
                 </a>
               </li>
-              <li className="text-slate-500">
-                Francisco Morazán y alrededores
-              </li>
+              <li className="text-slate-500">Honduras · consultas a nivel nacional</li>
             </ul>
           </div>
         </div>

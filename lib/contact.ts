@@ -17,6 +17,15 @@ export function whatsappUrl(text: string) {
 }
 
 /**
+ * Cotización de un servicio o proyecto (Tecnología / Construcción).
+ */
+export function whatsappQuoteUrl(division: string, topic?: string) {
+  let text = `Hola, quiero cotizar un proyecto de ${division}`;
+  if (topic) text += `: ${topic}`;
+  return whatsappUrl(text);
+}
+
+/**
  * Mensaje de interés por WhatsApp.
  * Si hay `productSlug`, incluye el enlace a la ficha del producto.
  */

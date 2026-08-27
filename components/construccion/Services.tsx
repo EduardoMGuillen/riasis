@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Obra nueva",
+    title: "Viviendas",
     description:
-      "Viviendas unifamiliares, promociones y naves industriales desde cimentación hasta llave en mano.",
+      "Casas nuevas, ampliaciones y terrazas. Un responsable de proyecto de la cimentación al cierre.",
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
       </svg>
     ),
   },
   {
-    title: "Reformas integrales",
+    title: "Remodelaciones",
     description:
-      "Actualización de baños, cocinas y distribución interior con mínima interrupción de tu actividad.",
+      "Residencial y comercial: distribución, instalaciones y acabados con el menor corte posible a tu operación.",
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H3a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H3a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1V4z" />
@@ -24,9 +24,19 @@ const services = [
     ),
   },
   {
-    title: "Ampliaciones",
+    title: "Obra comercial",
     description:
-      "Extensiones horizontales y verticales con estudio estructural y licencias gestionadas por nosotros.",
+      "Locales, oficinas y edificios de escala media. Coordinación de gremios y cronograma compartido.",
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+  },
+  {
+    title: "Obra civil",
+    description:
+      "Pavimentación, drenajes, movimiento de tierra y adecuaciones de sitio. El alcance se confirma en visita.",
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
@@ -34,33 +44,22 @@ const services = [
     ),
   },
   {
-    title: "Instalaciones",
+    title: "Estructura y cubiertas",
     description:
-      "Fontanería, electricidad, climatización y eficiencia energética con certificaciones al cierre.",
+      "Techos, losas, columnas y trabajos de concreto. Ejecución alineada al proyecto, sin especialidades que no estén confirmadas.",
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
       </svg>
     ),
   },
   {
-    title: "Dirección de obra",
+    title: "Acabados",
     description:
-      "Coordinación de gremios, control de calidad, reuniones con propiedad y documentación al día.",
+      "Tabla yeso, pisos, revestimientos y pintura. Cierre limpio, listo para habitar u operar. Mantenimiento posterior si lo pides.",
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Mantenimiento industrial",
-    description:
-      "Reparaciones puntuales, refuerzos estructurales y adecuaciones normativas en instalaciones productivas.",
-    icon: (
-      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
       </svg>
     ),
   },
@@ -94,8 +93,8 @@ export default function Services() {
             Servicios para cada fase de tu proyecto
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Un único interlocutor: planificación, ejecución y entrega documentada, con
-            transparencia en costes y cronograma.
+            Un interlocutor: planificación, ejecución y entrega. Lo que no
+            hacemos aún no lo anunciamos.
           </p>
         </motion.div>
 

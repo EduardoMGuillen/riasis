@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { construccionImages } from "@/lib/construccion-images";
 
 const metrics = [
-  { value: "15+", label: "Años en el sector" },
-  { value: "120+", label: "Proyectos entregados" },
-  { value: "100%", label: "Garantía en acabados" },
+  { value: "Un responsable", label: "Por proyecto, de punta a punta" },
+  { value: "Presupuesto", label: "Desglosado, sin letra pequeña" },
+  { value: "Avance", label: "Informe fotográfico periódico" },
 ];
 
 export default function Hero() {
@@ -62,8 +62,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.18 }}
           className="mt-5 max-w-lg text-base text-white/80 md:text-lg"
         >
-          Obra nueva, rehabilitación y ampliaciones con dirección de obra propia,
-          materiales certificados y cumplimiento estricto de plazos y presupuesto.
+          Obra nueva, remodelación y obra civil con dirección propia,
+          presupuesto desglosado y un calendario que se comparte.
         </motion.p>
 
         <motion.div

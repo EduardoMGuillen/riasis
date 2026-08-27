@@ -51,9 +51,10 @@ export default function About() {
             Tecnología con cara amigable.
           </h2>
           <p className="mt-5 text-white/70 md:text-lg">
-            Riasis Tecnología es una tienda de smartphones de alta gama en
-            Honduras. Te ayudamos a elegir el modelo correcto y cierras la
-            compra por WhatsApp o Instagram — simple, directo y humano.
+            Riasis Tecnología es la tienda de smartphones de alta gama del grupo
+            y el equipo que instala redes, cámaras y control de acceso. Eliges
+            el equipo en la vitrina; la infraestructura se cotiza y se ejecuta
+            en sitio. WhatsApp e Instagram, sin fricción.
           </p>
 
           <ul className="mt-8 space-y-3">

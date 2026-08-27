@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Riasis Tecnología | Smartphones de alta gama",
+  title: "Riasis Tecnología | Dispositivos e infraestructura IT",
   description:
-    "Tienda premium de celulares en Honduras. iPhone, Galaxy, Pixel y más. Consulta por WhatsApp o Instagram.",
+    "Smartphones de alta gama, redes, cámaras y cableado estructurado en Honduras. Catálogo online e instalación en campo.",
 };
 
 export default function TecnologiaLayout({

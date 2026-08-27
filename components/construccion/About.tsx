@@ -6,9 +6,9 @@ import { construccionImages } from "@/lib/construccion-images";
 
 const checks = [
   "Equipo técnico y de obra en plantilla",
-  "Seguros de responsabilidad civil y accidentes",
   "Presupuestos desglosados sin letra pequeña",
   "Visitas periódicas con informe fotográfico",
+  "Mantenimiento posterior si el cliente lo pide",
 ];
 
 export default function About() {
@@ -39,9 +39,10 @@ export default function About() {
               transition={{ delay: 0.2, duration: 0.4 }}
               className="absolute -bottom-6 -right-2 max-w-[220px] rounded-xl border border-slate-200 bg-white p-4 shadow-lg sm:right-4"
             >
-              <p className="font-display text-3xl text-brand-600">ISO-ready</p>
+              <p className="font-display text-2xl text-brand-600">En sitio</p>
               <p className="mt-1 text-xs text-slate-600">
-                Procesos alineados con estándares de calidad y prevención.
+                Levantamiento y mediciones antes de cotizar. Nada de números de
+                catálogo.
               </p>
             </motion.div>
           </motion.div>
@@ -76,7 +77,7 @@ export default function About() {
               ))}
             </ul>
             <a
-              href="#contacto"
+              href="#proceso"
               className="mt-10 inline-flex rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-500 hover:text-brand-700"
             >
               Conocer nuestro proceso
